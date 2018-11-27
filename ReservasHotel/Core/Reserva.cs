@@ -1,8 +1,9 @@
-//Cambiar boolean-bool, Date-DateTime
+﻿//Cambiar boolean-bool, Date-DateTime
 
 using System;
 using System.Text;
 using ReservasHotel;
+using System.Globalization;
 
 /// <summary>
 ///  A class that represents ...
@@ -10,25 +11,12 @@ using ReservasHotel;
 ///  @see OtherClasses
 ///  @author your_name_here
 /// </summary>
-public class Reserva {
+public class Reserva
+{
     // Attributes
+	public const double Iva = 0.21; 
 
-    private string idReserva;
-
-    private Habitacion habitacion;
-
-    private Cliente cliente;
-
-    private DateTime fechaEntrada;
-
-    private DateTime fechaSalida;
-
-    private bool usaGaraje;
-
-    private double tarifaDia;
-
-    private int iva;
-
+    private Habitacion habitacion;   
 
 
     // Associations
@@ -37,34 +25,59 @@ public class Reserva {
     /// </summary>
 
     public Reserva(Habitacion h, Cliente c, DateTime fEntrada, DateTime fSalida, bool g,
-                                double tarifa, int iva) {
-        this.habitacion = h;
-        this.cliente = c;
+                                double tarifa)
+    {
+        this.Habitacion = h;
+		this.Tipo = h.Tipo;
+        this.Cliente = c;
         this.FechaEntrada = fEntrada;
         this.FechaSalida = fSalida;
         this.UsaGaraje = g;
-        this.tarifaDia = tarifa;
-        this.iva = iva;
+		this.TarifaDia = tarifa;
         this.IdReserva = crearIdentificador();
 
     }
-
-
-    public DateTime FechaEntrada {
+    
+	public Habitacion Habitacion
+    {
         get; private set;
     }
 
-    public DateTime FechaSalida {
+	public string Tipo
+    {
         get; private set;
     }
 
-    public Boolean UsaGaraje {
+    public DateTime FechaEntrada
+    {
         get; private set;
     }
 
-    public string IdReserva {
+    public DateTime FechaSalida
+    {
         get; private set;
     }
+
+    public Boolean UsaGaraje
+    {
+        get; private set;
+    }
+
+    public string IdReserva
+    {
+        get; private set;
+    }
+
+	public double TarifaDia
+    {
+        get; private set;
+    }
+
+	public Cliente Cliente
+    {
+        get; private set;
+    }
+
 
     // Operations
 
@@ -75,10 +88,11 @@ public class Reserva {
     /// </summary>
     /// <returns>
     /// </returns>
-    public double calcularTotal() {
+    public double calcularTotal()
+    {
 
-        double precio = calcularNumDias() * this.tarifaDia;
-        precio += precio * this.iva;
+        double precio = calcularNumDias() * this.TarifaDia;
+		precio += precio * Iva;
         return precio;
     }
 
@@ -89,39 +103,71 @@ public class Reserva {
     /// </summary>
     /// <returns>
     /// </returns>
-    private int calcularNumDias() {
-        return (this.fechaSalida - this.fechaEntrada).Days;
+    private int calcularNumDias()
+    {
+    
+        return (this.FechaSalida - this.FechaEntrada).Days;
+
 
     }
 
-    /// <summary>
-    ///  An operation that does...
-    /// 
-    ///  @param firstParam a description of this parameter
-    /// </summary>
-    /// <returns>
-    /// </returns>
-    public string toString() {
+	/// <summary>
+	///  An operation that does...
+	/// 
+	///  @param firstParam a description of this parameter
+	/// </summary>
+	/// <returns>
+	/// </returns>
+
+	public override string ToString()
+    {
         var toret = new StringBuilder();
-        toret.AppendLine("Reserva: ");
-        toret.Append(this.IdReserva);
-        toret.AppendLine(this.FechaEntrada.ToString("yyyyMMddTHH:mm:ssZ"));
+		toret.AppendLine("------------------------------------------------------");
+        toret.Append("Reserva: ");
+        toret.AppendLine(this.IdReserva);
+		toret.Append("Tipo: ");
+		toret.AppendLine(this.Tipo);
+		toret.Append(this.FechaEntrada.ToString("yyyy/MM/dd HH:mm:ss"));
         toret.Append(" - ");
-        toret.Append(this.FechaSalida.ToString("yyyyMMddTHH:mm:ssZ"));
-        toret.AppendLine(cliente.ToString());
-        toret.AppendLine("Utiliza el garaje: ");
-        toret.Append(this.UsaGaraje);
-        toret.AppendLine(this.tarifaDia.ToString());
+		toret.AppendLine(this.FechaSalida.ToString("yyyy/MM/dd HH:mm:ss"));
+        toret.AppendLine(Cliente.ToString());
+        toret.Append("Utiliza el garaje: ");
+		toret.AppendLine(this.UsaGaraje.ToString());
+        toret.Append(this.TarifaDia.ToString());
         toret.Append(" €/dia - iva: ");
-        toret.Append(this.iva);
-        toret.AppendLine("Precio total: ");
-        toret.Append(calcularTotal().ToString());
+		toret.AppendLine(Iva.ToString());
+        toret.Append("Precio total: ");
+        toret.AppendLine(calcularTotal().ToString());
+		toret.AppendLine("------------------------------------------------------");
 
 
         return toret.ToString();
 
     }
 
+
+	public string GenerarFactura()
+    {
+        var toret = new StringBuilder();
+        toret.AppendLine("------------------------------------------------------");
+        toret.Append("Factura: ");
+        toret.AppendLine(this.IdReserva);
+        toret.Append(this.FechaEntrada.ToString("yyyy/MM/dd HH:mm:ss"));
+        toret.Append(" - ");
+        toret.AppendLine(this.FechaSalida.ToString("yyyy/MM/dd HH:mm:ss"));
+        toret.AppendLine(Cliente.ToString());
+        toret.Append(this.TarifaDia.ToString());
+        toret.Append(" €/dia - iva: ");
+        toret.AppendLine(Iva.ToString());
+        toret.Append("Precio total: ");
+        toret.AppendLine(calcularTotal().ToString());
+		toret.AppendLine("------------------------------------------------------");
+
+
+        return toret.ToString();
+
+    }
+    
     /// <summary>
     ///  An operation that does...
     /// 
@@ -129,10 +175,11 @@ public class Reserva {
     /// </summary>
     /// <returns>
     /// </returns>
-    private string crearIdentificador() {
-
-        return this.FechaEntrada.Year + this.FechaEntrada.Month +
-            this.FechaEntrada.Day + this.habitacion.IdHabitacion;
+    private string crearIdentificador()
+    {
+		
+		return this.FechaEntrada.Year.ToString() + this.FechaEntrada.Month.ToString() +
+			       this.FechaEntrada.Day.ToString() + this.Habitacion.IdHabitacion;
 
     }
 } /* end class Reserva */
