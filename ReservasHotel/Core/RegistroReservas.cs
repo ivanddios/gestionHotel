@@ -6,6 +6,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using ReservasHotel;
+using Habitaciones.Core;
 
 /// <summary>
 ///  Una clase que representa una coleccion de objetos de tipo reserva
@@ -126,8 +127,12 @@ public class RegistroReservas : ICollection<Reserva>
                              new XAttribute("id", reserva.IdReserva),
 				             new XElement("cliente", new XElement("apellidos", reserva.Cliente.Apellidos),
 				                          new XElement("nombre", reserva.Cliente.Nombre)),
-				             new XElement("habitacion", new XAttribute("id", reserva.Habitacion.IdHabitacion),
-				                          new XElement("tipo", reserva.Habitacion.Tipo)),
+				             new XElement("habitacion", new XAttribute("id", reserva.Habitacion.Identificador),
+				                          new XElement("tipo", reserva.Habitacion.Tipo),
+                                          new XElement("fechaReserva", reserva.Habitacion.FechaReserva),
+                                          new XElement("fechaRenovacion", reserva.Habitacion.FechaRenovacion),
+                                          new XElement("comodidades", reserva.Habitacion.Comodidades)
+                                          ),
 				             new XElement("fechaEntrada", reserva.FechaEntrada.ToString("yyyy/MM/dd HH:mm:ss")),
 				             new XElement("fechaSalida", reserva.FechaSalida.ToString("yyyy/MM/dd HH:mm:ss")),
                              new XElement("garaje", reserva.UsaGaraje),
@@ -156,7 +161,6 @@ public class RegistroReservas : ICollection<Reserva>
 		var doc = XDocument.Load(archivo);
               
         var reservasElement = doc.Root.Elements("reserva");
-		Habitacion hab = new Habitacion("122", "individual");
 
 		foreach (XElement reservaElement in reservasElement)
         {
@@ -165,8 +169,12 @@ public class RegistroReservas : ICollection<Reserva>
 			Cliente cliente = new Cliente((string)clienteElement.Element("nombre"), (string)clienteElement.Element("apellidos"));
 
 			XElement habitacionElement = reservaElement.Element("habitacion");
-			Habitacion habitacion = new Habitacion((string)habitacionElement.Attribute("id"), (string)habitacionElement.Element("tipo"));
-
+			Habitacion habitacion = new Habitacion((string)habitacionElement.Element("tipo"),
+                                            (string)habitacionElement.Element("fechaReserva"),
+                                            (int)habitacionElement.Attribute("id"), 
+                                            (string)habitacionElement.Element("fechaRenovacion"),
+                                            (string)habitacionElement.Element("comodidades"));
+             
 			var reserva = new Reserva(habitacion, cliente, (DateTime)reservaElement.Element("fechaEntrada"), 
 			                          (DateTime) reservaElement.Element("fechaSalida"), 
 			                          (bool)reservaElement.Element("garaje"), (double)reservaElement.Element("tarifa"));

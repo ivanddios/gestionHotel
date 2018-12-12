@@ -4,6 +4,7 @@
     using System.Drawing;
     using System.Windows.Forms;
     using System.Collections.Generic;
+    using Habitaciones.Core;
 
 	public partial class DlgAltaReserva: Form
     {
@@ -284,30 +285,42 @@
             textCellTemplate3.Style.ForeColor = Color.Black;
             textCellTemplate4.Style.BackColor = Color.Lavender;
             textCellTemplate4.Style.ForeColor = Color.Black;
-            
 
-            var column0 = new DataGridViewTextBoxColumn
+
+            var column0 = new DataGridViewTextBoxColumn()
+            {
+                SortMode = DataGridViewColumnSortMode.NotSortable,
+                CellTemplate = textCellTemplate0,
+                HeaderText = "Habitacion",
+                ReadOnly = true,
+                Width = 80
+
+            };
+
+            var column1 = new DataGridViewTextBoxColumn()
             {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 CellTemplate = textCellTemplate1,
-                HeaderText = "Habitacion",
-                Width = 90,
-                ReadOnly = true
+                HeaderText = "Tipo",
+                ReadOnly = true,
+                Width = 100
             };
 
-            var column1 = new DataGridViewTextBoxColumn
+            var column2 = new DataGridViewTextBoxColumn()
             {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 CellTemplate = textCellTemplate2,
-                HeaderText = "Tipo",
-                Width = 90,
-                ReadOnly = true
+                HeaderText = "Comodidades",
+                ReadOnly = true,
+                Width = 195
+
             };
+           
             
             
 
             this.grdLista.Columns.AddRange(new DataGridViewColumn[] {
-                column0, column1
+                column0, column1, column2
             });
 
             pnlLista.Controls.Add(this.grdLista);
@@ -433,7 +446,7 @@
         public DataGridView grdLista;
 
         private RegistroReservas reservas;
-        private List<Habitacion> habitaciones;
+        private Habitaciones.XML.RegistroHabitaciones habitaciones;
         private Reserva reservaModificar;
 
 

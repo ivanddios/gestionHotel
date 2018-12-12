@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using Habitaciones.Core;
+using Habitaciones.XML;
 
 namespace ReservasHotel.View
 {
     public partial class DlgAltaReserva
     {
-        public DlgAltaReserva(List<Habitacion> hab, Reserva r)
+        public DlgAltaReserva(RegistroHabitaciones hab, Reserva r)
         {
             this.reservaModificar = r;
             this.Build();
@@ -25,18 +27,8 @@ namespace ReservasHotel.View
 
         public void comprobarHabitacionesDisponibles()
         {
-            //var fechaEntrada = this.FechaEntrada;
-            //var fechaSalida = this.FechaSalida;
-           /* if (validarFechas())
-            {*/
-                comprobarHabitaciones();
-           /* }
-            else
-            {
-                //this.fechaEntrada.Value = fechaEntrada;
-                //this.fechaSalida.Value = fechaSalida;
+            comprobarHabitaciones();
 
-            }*/
         }
 
 
@@ -60,12 +52,12 @@ namespace ReservasHotel.View
                 Console.WriteLine("Diferencia " + fEntradaDiferenciaEntrada + " " + fSalidaDiferenciaEntrada);
                 if (fEntradaDiferenciaEntrada < 0 && fSalidaDiferenciaEntrada < 0 || fEntradaDiferenciaSalida > 0 && fSalidaDiferenciaSalida > 0)
                 {
-                    Console.WriteLine("Habitacion " + r.Habitacion.IdHabitacion + " disponible");
+                    Console.WriteLine("Habitacion " + r.Habitacion.Identificador + " disponible");
                 }
                 else
                 {
                     Console.WriteLine("Habitacion " + r.Habitacion.ToString() + " no disponible");
-                    if(this.reservaModificar != null && this.reservaModificar.Habitacion.IdHabitacion == r.Habitacion.IdHabitacion)
+                    if(this.reservaModificar != null && this.reservaModificar.Habitacion.Identificador == r.Habitacion.Identificador)
                     {
                         
                     }
@@ -87,16 +79,16 @@ namespace ReservasHotel.View
         private void habitacionesDisponibles(List<Habitacion> habOcupadas)
         {
             List<Habitacion> habDisponibles = new List<Habitacion>();
-
-            foreach (Habitacion hab in this.habitaciones)
+            for(int i=0; i<this.habitaciones.Count; i++)
             {
-                habDisponibles.Add(hab);
+                habDisponibles.Add(this.habitaciones[i]);
             }
+            
             foreach (Habitacion h in habOcupadas)
             {
                 for (int i=0; i<habDisponibles.Count;i++)
                 {  
-                    if(h.IdHabitacion == habDisponibles[i].IdHabitacion)
+                    if(h.Identificador == habDisponibles[i].Identificador)
                     {
                         bool borrado = habDisponibles.Remove(habDisponibles[i]);
                     }
@@ -149,9 +141,9 @@ namespace ReservasHotel.View
             Habitacion habitacion = habitacionesDisponibles[rowIndex];
 
             // Assign data
-            //row.Cells[0].Value = (rowIndex + 1).ToString().PadLeft(4, ' ');
-            row.Cells[0].Value = habitacion.IdHabitacion;
+            row.Cells[0].Value = habitacion.Identificador;
             row.Cells[1].Value = habitacion.Tipo;
+            row.Cells[2].Value = habitacion.Comodidades;
 
             // Assign tooltip text
             foreach (DataGridViewCell cell in row.Cells)
@@ -169,7 +161,8 @@ namespace ReservasHotel.View
             {
                 if (row.Cells[0].Value != null)
                 {
-                    var hab = new Habitacion(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString());
+                    //var hab = new Habitacion(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString());
+                    var hab = this.habitaciones.getHabitacion((int)row.Cells[0].Value);
                     this.habitacion = hab;
 
                     ActualizarTarifaHabitacion(row);

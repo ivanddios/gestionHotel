@@ -2,6 +2,7 @@
 using System.Text;
 using ReservasHotel;
 using System.Globalization;
+using Habitaciones.Core;
 
 /// <summary>
 ///  La clase representa una reserva hecha por un cliente
@@ -169,7 +170,7 @@ public class Reserva
     {
 		
 		return this.FechaEntrada.Year.ToString() + this.FechaEntrada.Month.ToString() +
-			       this.FechaEntrada.Day.ToString() + this.Habitacion.IdHabitacion;
+			       this.FechaEntrada.Day.ToString() + this.Habitacion.Identificador;
 
     }
 } /* end class Reserva */

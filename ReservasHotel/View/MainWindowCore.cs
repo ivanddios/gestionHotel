@@ -18,7 +18,8 @@
             this.Build();
 			
             this.reservas = RegistroReservas.RecuperarXml("registro_reservas.xml");
-            this.habitaciones = this.crearHabitaciones();
+            this.habitaciones = RegistroHabitaciones.RecuperaXml();
+            //this.habitaciones = this.crearHabitaciones();
             this.ActualizaListaReservas(0);
 
             //Integracion CLIENTES
@@ -74,7 +75,7 @@
 
 
         //metodo de apoyo hasta la integracion
-        private List<ReservasHotel.Habitacion> crearHabitaciones()
+        /*private List<ReservasHotel.Habitacion> crearHabitaciones()
         {
         
             List<ReservasHotel.Habitacion>  toret = new List<ReservasHotel.Habitacion>();
@@ -86,11 +87,13 @@
 
             return toret;
 
-        }
+        }*/
 
 		private void AltaReserva()
         {
-			var dlgAltaReserva = new DlgAltaReserva(habitaciones, null);
+            //var habitaciones = RegistroHabitaciones.RecuperaXml();
+
+            var dlgAltaReserva = new DlgAltaReserva(this.habitaciones, null);
 
 
             if (dlgAltaReserva.ShowDialog() == DialogResult.OK)
@@ -310,13 +313,16 @@
 
         private void OnQuit()
         {
+            RegistroReservas.GuardarXml("registro_reservas.xml", this.reservas);
             this.HabitacionCore.Registro.GuardaXml();
             Application.Exit();
         }
 
         private void Salir()
         {
+
             RegistroReservas.GuardarXml("registro_reservas.xml", this.reservas);
+            this.HabitacionCore.Registro.GuardaXml();
             Application.Exit();
         }
 
@@ -347,7 +353,7 @@
         }
 
         private RegistroReservas reservas;
-        private List<ReservasHotel.Habitacion> habitaciones;
+        private RegistroHabitaciones habitaciones;
 
     }
 }
