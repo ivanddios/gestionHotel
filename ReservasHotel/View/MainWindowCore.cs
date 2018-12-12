@@ -286,7 +286,6 @@
 
         private void OnQuit()
         {
-            //this.Registro.GuardaXml();
             this.HabitacionCore.Registro.GuardaXml();
             Application.Exit();
         }
