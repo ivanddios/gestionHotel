@@ -12,6 +12,7 @@ namespace ReservasHotel.View
 
         private Panel pnlPpal;
         private Panel pnlHabitaciones;
+        private Panel pnlClientes;
         public DataGridView grdLista;
         public TextBox edDetalle;
 
@@ -59,7 +60,9 @@ namespace ReservasHotel.View
             this.OpSalir = new MenuItem("&Salir") { Shortcut = Shortcut.CtrlQ };
             this.OpSalir.Click += (sender, e) => this.Salir();
 
-            //this.mHabitaciones.MenuItems.Add(this.OpConsultarReserva);
+            //Operaciones menu CLIENTES
+            this.OpConsultarClientes = new MenuItem("&Consultar");
+            this.OpInsertarCliente = new MenuItem("&Insertar");
 
             //Operaciones menu HABITACIONES
             this.OpConsultarHabitaciones = new MenuItem("&Consultar");
@@ -74,6 +77,11 @@ namespace ReservasHotel.View
             //Agregacion de las operaciones a los elementos
             this.mArchivo.MenuItems.Add(this.OpSalir);
 
+            //Agregacion operaciones de CLIENTES
+            this.mClientes.MenuItems.Add(this.OpConsultarClientes);
+            this.mClientes.MenuItems.Add(this.OpInsertarCliente);
+
+            //Agregacion operaciones de HABITACIONES
             this.mHabitaciones.MenuItems.Add(this.OpConsultarHabitaciones);
             this.mHabitaciones.MenuItems.Add(this.OpInsertarHabitacion);
 
@@ -299,6 +307,7 @@ namespace ReservasHotel.View
         public MenuItem OpModificacionReserva { get; set; }
         public MenuItem OpConsultarHabitaciones { get; set; }
         public MenuItem OpInsertarHabitacion { get; set; }
-
+        public MenuItem OpConsultarClientes { get; set; }
+        public MenuItem OpInsertarCliente { get; set; }
     }
 }

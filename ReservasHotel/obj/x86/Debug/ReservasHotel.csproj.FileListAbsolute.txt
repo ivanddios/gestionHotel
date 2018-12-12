@@ -17,3 +17,6 @@ C:\Users\Patri\Desktop\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.pdb
 C:\Users\Patri\Desktop\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.xml
 C:\Users\Patri\Desktop\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.exe.config
 C:\Users\Patri\Desktop\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csproj.CopyComplete
+C:\Users\Patri\Desktop\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.exe
+C:\Users\Patri\Desktop\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.pdb
+C:\Users\Patri\Desktop\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.exe.config

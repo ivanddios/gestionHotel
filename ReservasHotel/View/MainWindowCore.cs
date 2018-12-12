@@ -8,6 +8,8 @@
     using Habitaciones.Core;
     using Habitaciones.UI;
     using Habitaciones.XML;
+    using Gestión_Hotel.Core;
+
  
     public partial class MainWindow
     {
@@ -19,19 +21,41 @@
             this.habitaciones = this.crearHabitaciones();
             this.ActualizaListaReservas(0);
 
+            //Integracion CLIENTES
+            this.ClienteView = new Gestión_Hotel.UI.MainWindowViewClientes();
+            this.pnlClientes = this.ClienteView.BuildGUI();
+            this.ClienteCore = new Gestión_Hotel.UI.MainWindowCore(this.ClienteView);
+
+            //Integracion HABITACIONES
             this.HabitacionView = new Habitaciones.UI.MainWindowView();
             this.pnlHabitaciones = this.HabitacionView.BuildGUI();
             this.HabitacionCore = new Habitaciones.UI.MainWindowCore(this.HabitacionView);
 
+            //Consultar clientes
+            this.OpConsultarClientes.Click += (sender, e) => this.mostrarClientes();
+            //Insertar clientes
+            this.OpInsertarCliente.Click += (sender, e) => this.insertarCliente();
+
             //Consultar habitaciones
             this.OpConsultarHabitaciones.Click += (sender, e) => this.mostrarHabitaciones();
-
             //Insertar habitacion
             this.OpInsertarHabitacion.Click += (sender, e) => this.insertarHabitacion();
 
             this.OpAltaReserva.Click += (sender, e) => this.AltaReserva();
             this.FormClosed += (sender, e) => this.OnQuit();
 
+        }
+
+        private void mostrarClientes()
+        {
+            this.pnlPpal.Controls.Clear();
+            this.pnlPpal.Controls.Add(this.pnlClientes);
+            this.ClienteView.ResizeWindow();
+        }
+
+        private void insertarCliente()
+        {
+            this.ClienteCore.InsertarCliente();
         }
 
         private void mostrarHabitaciones()
@@ -72,7 +96,7 @@
             if (dlgAltaReserva.ShowDialog() == DialogResult.OK)
             {
                
-                var reserva = new Reserva(dlgAltaReserva.habitacion, new Cliente(dlgAltaReserva.Nombre, dlgAltaReserva.Apellidos),
+                var reserva = new Reserva(dlgAltaReserva.habitacion, new ReservasHotel.Cliente(dlgAltaReserva.Nombre, dlgAltaReserva.Apellidos),
                     dlgAltaReserva.FechaEntrada, dlgAltaReserva.FechaSalida, dlgAltaReserva.UsaGaraje, dlgAltaReserva.Tarifa);
                 this.reservas.Add(reserva);
                 Console.WriteLine(reserva);
@@ -176,7 +200,7 @@
                         if (dlgAltaReserva.ShowDialog() == DialogResult.OK)
                         {
                             this.reservas.Remove(reserva);
-                            var nuevaReserva = new Reserva(dlgAltaReserva.habitacion, new Cliente(dlgAltaReserva.Nombre, dlgAltaReserva.Apellidos),
+                            var nuevaReserva = new Reserva(dlgAltaReserva.habitacion, new ReservasHotel.Cliente(dlgAltaReserva.Nombre, dlgAltaReserva.Apellidos),
                                 dlgAltaReserva.FechaEntrada, dlgAltaReserva.FechaSalida, dlgAltaReserva.UsaGaraje, dlgAltaReserva.Tarifa);
                             this.reservas.Add(nuevaReserva);
 
@@ -297,8 +321,6 @@
         }
 
 
-
-
         public DlgAltaReserva DlgAltaReserva
         {
             get; private set;
@@ -310,6 +332,16 @@
         }
 
         public Habitaciones.UI.MainWindowCore HabitacionCore
+        {
+            get; private set;
+        }
+
+        public Gestión_Hotel.UI.MainWindowViewClientes ClienteView
+        {
+            get; private set;
+        }
+
+        public Gestión_Hotel.UI.MainWindowCore ClienteCore
         {
             get; private set;
         }

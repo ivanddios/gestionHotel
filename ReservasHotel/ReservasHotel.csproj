@@ -63,6 +63,10 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Clientes\Gestión Hotel\Gestión Hotel.csproj">
+      <Project>{bcc73ab8-c997-4d89-96bb-e79ec9335dc4}</Project>
+      <Name>Gestión Hotel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Habitaciones\Habitaciones\Habitaciones.csproj">
       <Project>{31d35d0b-4eab-45cd-997b-635c1b2a72a5}</Project>
       <Name>Habitaciones</Name>

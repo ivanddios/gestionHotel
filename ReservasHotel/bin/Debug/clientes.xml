@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clientes>
+  <cliente>
+    <nombre>Daniel González Pérez</nombre>
+    <dni>44488705H</dni>
+    <telefono>678876543</telefono>
+    <email>danielgpr@yahoo.es</email>
+    <direccion>Plaza del Couto 88, 9º B</direccion>
+  </cliente>
+  <cliente>
+    <nombre>Yeray Lage Freitas</nombre>
+    <dni>45567832R</dni>
+    <telefono>666999087</telefono>
+    <email>yeraylage@gmail.com</email>
+    <direccion>C/ Rosalía de Castro 79</direccion>
+  </cliente>
+  <cliente>
+    <nombre>Iván de Dios Fernández</nombre>
+    <dni>44488795X</dni>
+    <telefono>988252875</telefono>
+    <email>ivanddf1994@gmail.com</email>
+    <direccion>Avenida Vistahermosa 8, 3º A</direccion>
+  </cliente>
+  <cliente>
+    <nombre>Lucía Fernández Mantilla</nombre>
+    <dni>88877654R</dni>
+    <telefono>988777666</telefono>
+    <email>luciafernandez@gmail.com</email>
+    <direccion>C/ Peña Trevinca 24, 1º Izq</direccion>
+  </cliente>
+</clientes>
