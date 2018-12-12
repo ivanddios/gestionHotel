@@ -34,4 +34,21 @@
     <tarifa iva="0.21">12</tarifa>
     <total>58.08</total>
   </reserva>
+  <reserva id="201812151">
+    <cliente>
+      <apellidos>Perez</apellidos>
+      <nombre>Ana</nombre>
+    </cliente>
+    <habitacion id="1">
+      <tipo>matrimonio</tipo>
+      <fechaReserva>13/12/2018</fechaReserva>
+      <fechaRenovacion>13/12/2018</fechaRenovacion>
+      <comodidades>wifi</comodidades>
+    </habitacion>
+    <fechaEntrada>2018/12/15 00:37:08</fechaEntrada>
+    <fechaSalida>2018/12/20 00:37:07</fechaSalida>
+    <garaje>false</garaje>
+    <tarifa iva="0.21">20</tarifa>
+    <total>96.8</total>
+  </reserva>
 </reservas>

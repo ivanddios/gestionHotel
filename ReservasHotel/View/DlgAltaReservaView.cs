@@ -329,7 +329,89 @@
             return pnlLista;
         }
 
-        
+
+        private Panel BuildPanelListaClientes()
+        {
+            var pnlLista = new Panel();
+            pnlLista.SuspendLayout();
+            pnlLista.Dock = DockStyle.Fill;
+
+            // Crear gridview
+            this.grdLista = new DataGridView()
+            {
+                Dock = DockStyle.Fill,
+                AllowUserToResizeRows = false,
+                RowHeadersVisible = false,
+                AutoGenerateColumns = false,
+                MultiSelect = false,
+                AllowUserToAddRows = false,
+                EnableHeadersVisualStyles = false,
+                SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            };
+
+            this.grdLista.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            this.grdLista.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+
+            var textCellTemplate0 = new DataGridViewTextBoxCell();
+            var textCellTemplate1 = new DataGridViewTextBoxCell();
+            var textCellTemplate2 = new DataGridViewTextBoxCell();
+            var textCellTemplate3 = new DataGridViewTextBoxCell();
+            var textCellTemplate4 = new DataGridViewTextBoxCell();
+            textCellTemplate0.Style.BackColor = Color.LightGray;
+            textCellTemplate0.Style.ForeColor = Color.Black;
+            textCellTemplate1.Style.BackColor = Color.Lavender;
+            textCellTemplate1.Style.ForeColor = Color.Black;
+            textCellTemplate1.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+            textCellTemplate2.Style.BackColor = Color.Lavender;
+            textCellTemplate2.Style.ForeColor = Color.Black;
+            textCellTemplate3.Style.BackColor = Color.Lavender;
+            textCellTemplate3.Style.ForeColor = Color.Black;
+            textCellTemplate4.Style.BackColor = Color.Lavender;
+            textCellTemplate4.Style.ForeColor = Color.Black;
+
+
+            var column0 = new DataGridViewTextBoxColumn()
+            {
+                SortMode = DataGridViewColumnSortMode.NotSortable,
+                CellTemplate = textCellTemplate0,
+                HeaderText = "Id",
+                ReadOnly = true,
+                Width = 80
+
+            };
+
+            var column1 = new DataGridViewTextBoxColumn()
+            {
+                SortMode = DataGridViewColumnSortMode.NotSortable,
+                CellTemplate = textCellTemplate1,
+                HeaderText = "Nombre",
+                ReadOnly = true,
+                Width = 100
+            };
+
+            var column2 = new DataGridViewTextBoxColumn()
+            {
+                SortMode = DataGridViewColumnSortMode.NotSortable,
+                CellTemplate = textCellTemplate2,
+                HeaderText = "Apellidos",
+                ReadOnly = true,
+                Width = 195
+
+            };
+
+
+
+
+            this.grdLista.Columns.AddRange(new DataGridViewColumn[] {
+                column0, column1, column2
+            });
+
+            pnlLista.Controls.Add(this.grdLista);
+            pnlLista.ResumeLayout(false);
+
+            return pnlLista;
+        }
+
 
 
 

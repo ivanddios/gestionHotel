@@ -74,26 +74,11 @@
 
 
 
-        //metodo de apoyo hasta la integracion
-        /*private List<ReservasHotel.Habitacion> crearHabitaciones()
-        {
-        
-            List<ReservasHotel.Habitacion>  toret = new List<ReservasHotel.Habitacion>();
-            toret.Add(new ReservasHotel.Habitacion("223", "individual"));
-            toret.Add(new ReservasHotel.Habitacion("214", "matrimonio"));
-            toret.Add(new ReservasHotel.Habitacion("132", "individual"));
-            toret.Add(new ReservasHotel.Habitacion("121", "individual"));
-           
-
-            return toret;
-
-        }*/
-
 		private void AltaReserva()
         {
-            //var habitaciones = RegistroHabitaciones.RecuperaXml();
+            var habitaciones = RegistroHabitaciones.RecuperaXml();
 
-            var dlgAltaReserva = new DlgAltaReserva(this.habitaciones, null);
+            var dlgAltaReserva = new DlgAltaReserva(habitaciones, null);
 
 
             if (dlgAltaReserva.ShowDialog() == DialogResult.OK)
