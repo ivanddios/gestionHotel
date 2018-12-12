@@ -1,29 +1,23 @@
-﻿//Cambiar boolean-bool, Date-DateTime
-
-using System;
+﻿using System;
 using System.Text;
 using ReservasHotel;
 using System.Globalization;
 
 /// <summary>
-///  A class that represents ...
-/// 
-///  @see OtherClasses
-///  @author your_name_here
+///  La clase representa una reserva hecha por un cliente
+///  ///  @author Patricia Martin Perez
 /// </summary>
 public class Reserva
 {
     // Attributes
-	public const double Iva = 0.21; 
-
-    private Habitacion habitacion;   
+	public const double Iva = 0.21;      
 
 
     // Associations
 
-    /// <summary> 
+    /// <summary>
+    /// Se crea la clase con los atributos indicados y se crea un identificador a partir de ellos
     /// </summary>
-
     public Reserva(Habitacion h, Cliente c, DateTime fEntrada, DateTime fSalida, bool g,
                                 double tarifa)
     {
@@ -37,8 +31,9 @@ public class Reserva
         this.IdReserva = crearIdentificador();
 
     }
-    
-	public Habitacion Habitacion
+
+    //Propiedades
+    public Habitacion Habitacion
     {
         get; private set;
     }
@@ -82,11 +77,10 @@ public class Reserva
     // Operations
 
     /// <summary>
-    ///  An operation that does...
-    /// 
-    ///  @param firstParam a description of this parameter
+    ///  Calcula el precio total de la reserva utilizando el numero de dias
+    ///  de estancia en el hotel, la tarifa y el iva.
     /// </summary>
-    /// <returns>
+    /// <returns> El precio total como double
     /// </returns>
     public double calcularTotal()
     {
@@ -97,11 +91,9 @@ public class Reserva
     }
 
     /// <summary>
-    ///  An operation that does...
-    /// 
-    ///  @param firstParam a description of this parameter
+    ///  Calcula el numero de dias entre la fecha de entrada y la de salida
     /// </summary>
-    /// <returns>
+    /// <returns> Devuelve un entero del numero de días totales entre las fechas
     /// </returns>
     private int calcularNumDias()
     {
@@ -111,18 +103,15 @@ public class Reserva
 
     }
 
-	/// <summary>
-	///  An operation that does...
-	/// 
-	///  @param firstParam a description of this parameter
-	/// </summary>
-	/// <returns>
-	/// </returns>
+    /// <summary>
+    /// string con la informacion de la reserva
+    /// </summary>
+    /// <returns>  Devuelve un string con la informacion de la reserva
+    /// </returns>
 
-	public override string ToString()
+    public override string ToString()
     {
         var toret = new StringBuilder();
-		toret.AppendLine("------------------------------------------------------");
         toret.Append("Reserva: ");
         toret.AppendLine(this.IdReserva);
 		toret.Append("Tipo: ");
@@ -138,15 +127,18 @@ public class Reserva
 		toret.AppendLine(Iva.ToString());
         toret.Append("Precio total: ");
         toret.AppendLine(calcularTotal().ToString());
-		toret.AppendLine("------------------------------------------------------");
 
 
         return toret.ToString();
 
     }
 
-
-	public string GenerarFactura()
+    /// <summary>
+    /// Genera la factura de la reserva
+    /// </summary>
+    /// <returns>  Devuelve un string con la informacion de la factura
+    /// </returns>
+    public string GenerarFactura()
     {
         var toret = new StringBuilder();
         toret.AppendLine("------------------------------------------------------");
@@ -169,11 +161,9 @@ public class Reserva
     }
     
     /// <summary>
-    ///  An operation that does...
-    /// 
-    ///  @param firstParam a description of this parameter
+    ///  Crea un identificardor propio de una reserva
     /// </summary>
-    /// <returns>
+    /// <returns> Devuelve un string del identificador generado
     /// </returns>
     private string crearIdentificador()
     {

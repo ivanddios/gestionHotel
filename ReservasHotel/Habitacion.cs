@@ -18,5 +18,10 @@ namespace ReservasHotel
         {
             get; private set;
         }
+
+        public override string ToString()
+        {
+            return "Habitacion: " + IdHabitacion + " tipo: " + Tipo;
+        }
     }
 }

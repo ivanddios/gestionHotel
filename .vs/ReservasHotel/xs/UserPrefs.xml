@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{8B4DE635-4A2D-4A30-9CFD-B9DE8E7156AF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ReservasHotel/View/DlgAltaReserva.cs">
+    <Files>
+      <File FileName="ReservasHotel/Program.cs" Line="38" Column="10" />
+      <File FileName="ReservasHotel/Core/Reserva.cs" Line="18" Column="2" />
+      <File FileName="ReservasHotel/Core/RegistroReservas.cs" Line="93" Column="6" />
+      <File FileName="ReservasHotel/View/MainWindowCore.cs" Line="29" Column="20" />
+      <File FileName="ReservasHotel/View/MainWindowView.cs" Line="230" Column="51" />
+      <File FileName="ReservasHotel/View/DlgAltaReserva.cs" Line="92" Column="13" />
+      <File FileName="ReservasHotel/Cliente.cs" Line="5" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ReservasHotel PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

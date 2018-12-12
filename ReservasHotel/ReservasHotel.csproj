@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,7 +7,8 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ReservasHotel</RootNamespace>
     <AssemblyName>ReservasHotel</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,6 +33,8 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -40,10 +43,30 @@
     <Compile Include="Core\RegistroReservas.cs" />
     <Compile Include="Habitacion.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="View\DlgAltaReservaCore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DlgMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainWindowCore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainWindowView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DlgAltaReservaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\" />
-    <Folder Include="View\" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Habitaciones\Habitaciones\Habitaciones.csproj">
+      <Project>{31d35d0b-4eab-45cd-997b-635c1b2a72a5}</Project>
+      <Name>Habitaciones</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

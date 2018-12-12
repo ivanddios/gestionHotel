@@ -7,14 +7,8 @@ using System.Xml;
 using System.Xml.Linq;
 using ReservasHotel;
 
-// contains devuelve bool, boolean-bool, meto dos de ICollection
-// arhivo es string
-//agregar variable archivo
-
 /// <summary>
-///  A class that represents ...
-/// 
-///  @see OtherClasses
+///  Una clase que representa una coleccion de objetos de tipo reserva
 ///  @author Patricia Martin Perez
 /// </summary>
 public class RegistroReservas : ICollection<Reserva>
@@ -45,14 +39,10 @@ public class RegistroReservas : ICollection<Reserva>
     // Operations
 
     /// <summary>
-    ///  An operation that does...
-    /// 
-    ///  @param firstParam a description of this parameter
+    ///  Agrega una reserva a la coleccion.
     /// </summary>
-    /// <param name="r">
+    /// <param name="r"> La reserva a agregar.
     /// </param>
-    /// <returns>
-    /// </returns>
     public void Add(Reserva r)
     {
         this.reservas.Add(r);
@@ -60,14 +50,10 @@ public class RegistroReservas : ICollection<Reserva>
     }
 
     /// <summary>
-    ///  An operation that does...
-    /// 
-    ///  @param firstParam a description of this parameter
+    /// Elimina una reserva dada.
     /// </summary>
-    /// <param name="r">
-    /// </param>
-    /// <returns>
-    /// </returns>
+    /// <returns>True si se ha eliminado, False en otro caso.</returns>
+    /// <param>La reserva eliminar.</param>
     public bool Remove(Reserva r)
     {
         return this.reservas.Remove(r);
@@ -75,32 +61,41 @@ public class RegistroReservas : ICollection<Reserva>
     }
 
     /// <summary>
-    ///  An operation that does...
-    /// 
-    ///  @param firstParam a description of this parameter
+    /// Comprueba si la reserva dada se encuentra guardada.
     /// </summary>
-    /// <param name="r">
-    /// </param>
-    /// <returns>
-    /// </returns>
+    /// <returns>True si se encuentra, False en otro caso.</returns>
+    /// <param>La reserva a comprobar.</param>
     public bool Contains(Reserva r)
     {
         return this.reservas.Contains(r);
 
     }
-    
-	public Reserva this[int i]
+
+    // Indizador de las reservas
+    public Reserva this[int i]
     {
         get { return this.reservas[i]; }
         set { this.reservas[i] = value; }
     }
 
+    public Reserva getReserva(string idReserva)
+    {
+        foreach(Reserva r in this.reservas)
+        {
+            if(r.IdReserva == idReserva)
+            {
+                return r;
+            }
+        }
+
+        return null;
+
+    }
+
     /// <summary>
-    ///  An operation that does...
-    /// 
-    ///  @param firstParam a description of this parameter
+    /// Crea un string con la infromacion de una reserva.
     /// </summary>
-    /// <returns>
+    /// <returns> Devuelve un string de la reserva.
     /// </returns>
     public override string ToString()
     {
@@ -116,20 +111,15 @@ public class RegistroReservas : ICollection<Reserva>
     }
 
     /// <summary>
-    ///  An operation that does...
-    /// 
-    ///  @param firstParam a description of this parameter
+    /// Guarda la lista de las reservas como XML.
+    /// <param>El nombre del archivo.</param>
     /// </summary>
-    /// <param name="archivo">
-    /// </param>
-    /// <returns>
-    /// </returns>
-    public void GuardarXml(string archivo)
+    public static void GuardarXml(string archivo, RegistroReservas reservas)
     {
         var doc = new XDocument();
         var root = new XElement("reservas");
 
-        foreach (Reserva reserva in this.reservas)
+        foreach (Reserva reserva in reservas)
         {
             root.Add(
                 new XElement("reserva",
@@ -154,16 +144,13 @@ public class RegistroReservas : ICollection<Reserva>
 
     }
 
+ 
     /// <summary>
-    ///  An operation that does...
-    /// 
-    ///  @param firstParam a description of this parameter
+    /// Recupera las reservas desde un archivo XML.
     /// </summary>
-    /// <param name="archivo">
-    /// </param>
-    /// <returns>
-    /// </returns>
-    public RegistroReservas RecuperarXml(string archivo)
+    /// <returns>Una coleccion con las reservas
+    /// <param>El nombre del archivo.</param>
+    public static RegistroReservas RecuperarXml(string archivo)
     {
 		var toret = new RegistroReservas();
 		var doc = XDocument.Load(archivo);
@@ -195,31 +182,54 @@ public class RegistroReservas : ICollection<Reserva>
 		return toret;
     }
 
+    /// <summary>
+    /// Elimina todos las reservas almacenadas.
+    /// </summary>
     public void Clear()
     {
-        throw new NotImplementedException();
+        this.reservas.Clear();
     }
 
-    bool ICollection<Reserva>.Contains(Reserva item)
+    /// <summary>
+    /// Comprueba si la reserva dada se encuentra guardada.
+    /// </summary>
+    /// <returns>True si se encuentra, False en otro caso.</returns>
+    /// <param>La reserva a comprobar.</param>
+    bool ICollection<Reserva>.Contains(Reserva r)
     {
-        throw new NotImplementedException();
+        return this.reservas.Contains(r);
     }
 
-    public void CopyTo(Reserva[] array, int arrayIndex)
+    /// <summary>
+    /// Copia las reservas a partir de la posicion dada a un vector.
+    /// </summary>
+    /// <param name="r">El vector al que copiar las reservas.</param>
+    /// <param name="i">La posisicon desde la que copiar.</param>
+    public void CopyTo(Reserva[] r, int i)
     {
-        throw new NotImplementedException();
+        this.reservas.CopyTo(r, i);
     }
 
-    bool ICollection<Reserva>.Remove(Reserva item)
+    /// <summary>
+    /// Elimina una reserva dada.
+    /// </summary>
+    /// <returns>True si se ha eliminado, False en otro caso.</returns>
+    /// <param>La reserva a eliminar.</param>
+    bool ICollection<Reserva>.Remove(Reserva r)
     {
-        throw new NotImplementedException();
+        return this.reservas.Remove(r);
     }
 
+    //Enumerar con tipo
     public IEnumerator<Reserva> GetEnumerator()
     {
-        throw new NotImplementedException();
+        foreach (var r in this.reservas)
+        {
+            yield return r;
+        }
     }
 
+    //Enumerar sin tipo
     IEnumerator IEnumerable.GetEnumerator()
     {
         throw new NotImplementedException();

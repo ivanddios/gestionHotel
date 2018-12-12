@@ -1,7 +1,10 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservasHotel", "ReservasHotel\ReservasHotel.csproj", "{8B4DE635-4A2D-4A30-9CFD-B9DE8E7156AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Habitaciones", "..\Habitaciones\Habitaciones\Habitaciones.csproj", "{31D35D0B-4EAB-45CD-997B-635C1B2A72A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +16,15 @@ Global
 		{8B4DE635-4A2D-4A30-9CFD-B9DE8E7156AF}.Debug|x86.Build.0 = Debug|x86
 		{8B4DE635-4A2D-4A30-9CFD-B9DE8E7156AF}.Release|x86.ActiveCfg = Release|x86
 		{8B4DE635-4A2D-4A30-9CFD-B9DE8E7156AF}.Release|x86.Build.0 = Release|x86
+		{31D35D0B-4EAB-45CD-997B-635C1B2A72A5}.Debug|x86.ActiveCfg = Debug|x86
+		{31D35D0B-4EAB-45CD-997B-635C1B2A72A5}.Debug|x86.Build.0 = Debug|x86
+		{31D35D0B-4EAB-45CD-997B-635C1B2A72A5}.Release|x86.ActiveCfg = Release|x86
+		{31D35D0B-4EAB-45CD-997B-635C1B2A72A5}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B928083-FEF2-49B4-8038-12221E4686AD}
 	EndGlobalSection
 EndGlobal
