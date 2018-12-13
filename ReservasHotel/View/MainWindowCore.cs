@@ -9,6 +9,7 @@
     using Habitaciones.UI;
     using Habitaciones.XML;
     using Gestión_Hotel.Core;
+    using Gestión_Hotel.XML;
 
  
     public partial class MainWindow
@@ -19,7 +20,8 @@
 			
             this.reservas = RegistroReservas.RecuperarXml("registro_reservas.xml");
             this.habitaciones = RegistroHabitaciones.RecuperaXml();
-            //this.habitaciones = this.crearHabitaciones();
+            this.clientes = RegistroClientes.RecuperaXml();
+
             this.ActualizaListaReservas(0);
 
             //Integracion CLIENTES
@@ -78,13 +80,13 @@
         {
             var habitaciones = RegistroHabitaciones.RecuperaXml();
 
-            var dlgAltaReserva = new DlgAltaReserva(habitaciones, null);
+            var dlgAltaReserva = new DlgAltaReserva(habitaciones, null, clientes);
 
 
             if (dlgAltaReserva.ShowDialog() == DialogResult.OK)
             {
                
-                var reserva = new Reserva(dlgAltaReserva.habitacion, new ReservasHotel.Cliente(dlgAltaReserva.Nombre, dlgAltaReserva.Apellidos),
+                var reserva = new Reserva(dlgAltaReserva.habitacion, dlgAltaReserva.cliente,
                     dlgAltaReserva.FechaEntrada, dlgAltaReserva.FechaSalida, dlgAltaReserva.UsaGaraje, dlgAltaReserva.Tarifa);
                 this.reservas.Add(reserva);
                 Console.WriteLine(reserva);
@@ -139,7 +141,7 @@
             row.Cells[2].Value = reserva.FechaEntrada;
             row.Cells[3].Value = reserva.FechaSalida;
             row.Cells[4].Value = reserva.calcularTotal();
-            row.Cells[5].Value = reserva.Cliente.Nombre + " " + reserva.Cliente.Apellidos;
+            row.Cells[5].Value = reserva.Cliente.Nombre;
 
 
             // Assign tooltip text
@@ -170,6 +172,9 @@
         }
 
 
+       
+
+
 
         public void modificarReserva()
         {
@@ -183,12 +188,12 @@
 
                     if (reserva != null)
                     {
-                        Console.WriteLine(reserva.Cliente.Apellidos);
-                        var dlgAltaReserva = new DlgAltaReserva(habitaciones, reserva);
+                        
+                        var dlgAltaReserva = new DlgAltaReserva(habitaciones, reserva, this.clientes);
                         if (dlgAltaReserva.ShowDialog() == DialogResult.OK)
                         {
                             this.reservas.Remove(reserva);
-                            var nuevaReserva = new Reserva(dlgAltaReserva.habitacion, new ReservasHotel.Cliente(dlgAltaReserva.Nombre, dlgAltaReserva.Apellidos),
+                            var nuevaReserva = new Reserva(dlgAltaReserva.habitacion, dlgAltaReserva.cliente,
                                 dlgAltaReserva.FechaEntrada, dlgAltaReserva.FechaSalida, dlgAltaReserva.UsaGaraje, dlgAltaReserva.Tarifa);
                             this.reservas.Add(nuevaReserva);
 
@@ -339,6 +344,7 @@
 
         private RegistroReservas reservas;
         private RegistroHabitaciones habitaciones;
+        private RegistroClientes clientes;
 
     }
 }

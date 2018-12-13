@@ -7,6 +7,8 @@ using System.Xml;
 using System.Xml.Linq;
 using ReservasHotel;
 using Habitaciones.Core;
+using Gestión_Hotel.Core;
+using Gestión_Hotel.XML;
 
 /// <summary>
 ///  Una clase que representa una coleccion de objetos de tipo reserva
@@ -125,9 +127,10 @@ public class RegistroReservas : ICollection<Reserva>
             root.Add(
                 new XElement("reserva",
                              new XAttribute("id", reserva.IdReserva),
-				             new XElement("cliente", new XElement("apellidos", reserva.Cliente.Apellidos),
-				                          new XElement("nombre", reserva.Cliente.Nombre)),
-				             new XElement("habitacion", new XAttribute("id", reserva.Habitacion.Identificador),
+                             //new XElement("cliente", new XElement("apellidos", reserva.Cliente.Apellidos),
+                             //           new XElement("nombre", reserva.Cliente.Nombre)),
+                             new XElement("cliente", new XElement("dni", reserva.Habitacion.Identificador)),
+                             new XElement("habitacion", new XAttribute("id", reserva.Habitacion.Identificador),
 				                          new XElement("tipo", reserva.Habitacion.Tipo),
                                           new XElement("fechaReserva", reserva.Habitacion.FechaReserva),
                                           new XElement("fechaRenovacion", reserva.Habitacion.FechaRenovacion),
@@ -166,8 +169,9 @@ public class RegistroReservas : ICollection<Reserva>
         {
 
 			XElement clienteElement = reservaElement.Element("cliente");
-			Cliente cliente = new Cliente((string)clienteElement.Element("nombre"), (string)clienteElement.Element("apellidos"));
-
+			//Cliente cliente = new Cliente((string)clienteElement.Element("nombre"), (string)clienteElement.Element("apellidos"));
+            var clientes = RegistroClientes.RecuperaXml();
+            Cliente cliente = clientes.getUsuario((string)clienteElement.Element("dni"));
 			XElement habitacionElement = reservaElement.Element("habitacion");
 			Habitacion habitacion = new Habitacion((string)habitacionElement.Element("tipo"),
                                             (string)habitacionElement.Element("fechaReserva"),

@@ -41,7 +41,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\Reserva.cs" />
     <Compile Include="Core\RegistroReservas.cs" />
-    <Compile Include="Cliente.cs" />
     <Compile Include="View\DlgAltaReservaCore.cs">
       <SubType>Form</SubType>
     </Compile>

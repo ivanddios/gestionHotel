@@ -5,6 +5,9 @@
     using System.Windows.Forms;
     using System.Collections.Generic;
     using Habitaciones.Core;
+    using Habitaciones.XML;
+    using Gestión_Hotel.XML;
+    using Gestión_Hotel.Core;
 
 	public partial class DlgAltaReserva: Form
     {
@@ -53,7 +56,7 @@
             this.edApellidos = new TextBox { Dock = DockStyle.Fill };
             if (reservaModificar != null)
             {
-                this.edApellidos.AppendText(reservaModificar.Cliente.Apellidos);
+                this.edApellidos.AppendText(reservaModificar.Cliente.Nombre);
             }
             var lbApellidos = new Label
             {
@@ -337,7 +340,7 @@
             pnlLista.Dock = DockStyle.Fill;
 
             // Crear gridview
-            this.grdLista = new DataGridView()
+            this.grdListaClientes = new DataGridView()
             {
                 Dock = DockStyle.Fill,
                 AllowUserToResizeRows = false,
@@ -349,8 +352,8 @@
                 SelectionMode = DataGridViewSelectionMode.FullRowSelect
             };
 
-            this.grdLista.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
-            this.grdLista.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            this.grdListaClientes.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            this.grdListaClientes.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
 
             var textCellTemplate0 = new DataGridViewTextBoxCell();
             var textCellTemplate1 = new DataGridViewTextBoxCell();
@@ -374,9 +377,9 @@
             {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 CellTemplate = textCellTemplate0,
-                HeaderText = "Id",
+                HeaderText = "DNI",
                 ReadOnly = true,
-                Width = 80
+                Width = 120
 
             };
 
@@ -386,27 +389,19 @@
                 CellTemplate = textCellTemplate1,
                 HeaderText = "Nombre",
                 ReadOnly = true,
-                Width = 100
+                Width = 230
             };
 
-            var column2 = new DataGridViewTextBoxColumn()
-            {
-                SortMode = DataGridViewColumnSortMode.NotSortable,
-                CellTemplate = textCellTemplate2,
-                HeaderText = "Apellidos",
-                ReadOnly = true,
-                Width = 195
-
-            };
+            
 
 
 
 
-            this.grdLista.Columns.AddRange(new DataGridViewColumn[] {
-                column0, column1, column2
+            this.grdListaClientes.Columns.AddRange(new DataGridViewColumn[] {
+                column0, column1
             });
 
-            pnlLista.Controls.Add(this.grdLista);
+            pnlLista.Controls.Add(this.grdListaClientes);
             pnlLista.ResumeLayout(false);
 
             return pnlLista;
@@ -455,11 +450,14 @@
 			pnlAlta.SuspendLayout();
 			this.Controls.Add(pnlAlta);
             
-			var pnlNombreCliente = this.BuildPnlNombreCliente();
-			pnlAlta.Controls.Add(pnlNombreCliente);
+			//var pnlNombreCliente = this.BuildPnlNombreCliente();
+			//pnlAlta.Controls.Add(pnlNombreCliente);
 
-            var pnlApellidosCliente = this.BuildPnlApellidosCliente();
-            pnlAlta.Controls.Add(pnlApellidosCliente);
+            //var pnlApellidosCliente = this.BuildPnlApellidosCliente();
+            //pnlAlta.Controls.Add(pnlApellidosCliente);
+
+            var pnlListaClientes = this.BuildPanelListaClientes();
+            pnlAlta.Controls.Add(pnlListaClientes);
 
             var pnlFechaEntrada = this.BuildPnlFechaEntrada();
             pnlAlta.Controls.Add(pnlFechaEntrada);
@@ -479,8 +477,6 @@
             var pnlTotal = this.BuildPnlTotal();
             pnlAlta.Controls.Add(pnlTotal);
 
-           // var pnlComprobar = this.BuildPnlBotonComprobarHabitaciones();
-           // pnlAlta.Controls.Add(pnlComprobar);
 
             var pnlBotones = this.BuildPnlBotones();
 			pnlAlta.Controls.Add(pnlBotones);
@@ -489,10 +485,11 @@
 
             this.Text = "Alta Reserva";
             this.Size = new Size(400,
-			                     pnlNombreCliente.Height + pnlApellidosCliente.Height + 
-                                 pnlFechaEntrada.Height + pnlFechaSalida.Height + 
+			                     //pnlNombreCliente.Height + pnlApellidosCliente.Height + 
+                                 pnlFechaEntrada.Height + pnlFechaSalida.Height +
+                                 pnlListaClientes.Height +
                                  pnlLista.Height + pnlUsaGaraje.Height + pnlTarifa.Height +
-                                 pnlBotones.Height + + pnlTotal.Height + 30);
+                                 pnlBotones.Height + pnlTotal.Height + 30);
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MinimizeBox = false;
             this.MaximizeBox = false;
@@ -512,6 +509,7 @@
         public bool UsaGaraje => this.edGaraje.Checked;
         public double Tarifa => (double)this.edTarifa.Value;
         public Habitacion habitacion;
+        public Cliente cliente;
 
         private TextBox edNombre;
         private TextBox edApellidos;
@@ -526,9 +524,11 @@
 
         private Panel pnlPpal;
         public DataGridView grdLista;
+        public DataGridView grdListaClientes;
 
         private RegistroReservas reservas;
-        private Habitaciones.XML.RegistroHabitaciones habitaciones;
+        private RegistroHabitaciones habitaciones;
+        private RegistroClientes clientes;
         private Reserva reservaModificar;
 
 

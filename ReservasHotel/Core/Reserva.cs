@@ -3,6 +3,7 @@ using System.Text;
 using ReservasHotel;
 using System.Globalization;
 using Habitaciones.Core;
+using Gestión_Hotel.Core;
 
 /// <summary>
 ///  La clase representa una reserva hecha por un cliente

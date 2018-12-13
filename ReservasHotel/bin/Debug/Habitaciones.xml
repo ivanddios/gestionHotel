@@ -14,11 +14,4 @@
     <fechaRenovacion>12/02/2009</fechaRenovacion>
     <comodidades>Wifi, Mini Bar, TV</comodidades>
   </habitacion>
-  <habitacion>
-    <tipo>matrimonio</tipo>
-    <fechaReserva>13/12/2018</fechaReserva>
-    <identificador>1</identificador>
-    <fechaRenovacion>13/12/2018</fechaRenovacion>
-    <comodidades>wifi</comodidades>
-  </habitacion>
 </habitaciones>

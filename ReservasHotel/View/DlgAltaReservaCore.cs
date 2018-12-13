@@ -4,17 +4,22 @@ using System.Drawing;
 using System.Windows.Forms;
 using Habitaciones.Core;
 using Habitaciones.XML;
+using Gestión_Hotel.XML;
+using Gestión_Hotel.Core;
 
 namespace ReservasHotel.View
 {
     public partial class DlgAltaReserva
     {
-        public DlgAltaReserva(RegistroHabitaciones hab, Reserva r)
+        public DlgAltaReserva(RegistroHabitaciones hab, Reserva r, RegistroClientes c)
         {
             this.reservaModificar = r;
             this.Build();
             this.habitaciones = hab;
+            this.clientes = c;
+            this.ActualizaListaClientes(0);
             this.grdLista.SelectionChanged += (sender, e) => this.FilaSeleccionada();
+            this.grdListaClientes.SelectionChanged += (sender, e) => this.FilaSeleccionadaClientes();
             if (reservaModificar != null)
             {
                 this.edTarifa.Value = (decimal)this.reservaModificar.TarifaDia;
@@ -154,6 +159,57 @@ namespace ReservasHotel.View
             return;
         }
 
+
+        private void ActualizaListaClientes(int numRow)
+        {
+            int numRecorridos = this.clientes.Count;
+
+            // Crea y actualiza filas
+            for (int i = numRow; i < numRecorridos; ++i)
+            {
+                if (this.grdListaClientes.Rows.Count <= i)
+                {
+                    this.grdListaClientes.Rows.Add();
+                }
+
+                this.ActualizaFilaDeListaClientes(i, this.clientes);
+            }
+
+            // Eliminar filas sobrantes
+            int numExtra = this.grdListaClientes.Rows.Count - numRecorridos;
+            for (; numExtra > 0; --numExtra)
+            {
+                this.grdListaClientes.Rows.RemoveAt(numRecorridos);
+            }
+
+            return;
+        }
+
+        private void ActualizaFilaDeListaClientes(int rowIndex, RegistroClientes clientes)
+        {
+            if (rowIndex < 0
+              || rowIndex > this.grdListaClientes.Rows.Count)
+            {
+                throw new System.ArgumentOutOfRangeException(
+                            "fila fuera de rango: " + nameof(rowIndex));
+            }
+
+            DataGridViewRow row = this.grdListaClientes.Rows[rowIndex];
+            Cliente cliente = clientes[rowIndex];
+
+            // Assign data
+            row.Cells[0].Value = cliente.Dni;
+            row.Cells[1].Value = cliente.Nombre;
+
+            // Assign tooltip text
+            foreach (DataGridViewCell cell in row.Cells)
+            {
+                cell.ToolTipText = cliente.ToString();
+            }
+            this.FilaSeleccionada();
+            return;
+        }
+
         private void FilaSeleccionada()
         {
             //DataGridViewRow fila = this.grdLista.CurrentRow;
@@ -162,6 +218,7 @@ namespace ReservasHotel.View
                 if (row.Cells[0].Value != null)
                 {
                     //var hab = new Habitacion(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString());
+                    Console.WriteLine("habitacion" + row.Cells[0].Value);
                     var hab = this.habitaciones.getHabitacion((int)row.Cells[0].Value);
                     this.habitacion = hab;
 
@@ -170,6 +227,25 @@ namespace ReservasHotel.View
                 }
 
                 
+
+
+            }
+        }
+
+        private void FilaSeleccionadaClientes()
+        {
+            foreach (DataGridViewRow row in this.grdListaClientes.SelectedRows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    var cli = this.clientes.getUsuario(row.Cells[0].Value.ToString());
+                    this.cliente = cli;
+
+                    ActualizarTarifaHabitacion(row);
+
+                }
+
+
 
 
             }
