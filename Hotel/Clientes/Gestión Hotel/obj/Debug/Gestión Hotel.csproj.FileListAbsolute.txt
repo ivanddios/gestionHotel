@@ -1,0 +1,25 @@
+C:\Users\ivand\source\repos\Gestión Hotel\Gestión Hotel\obj\Debug\Gestión Hotel.csprojAssemblyReference.cache
+C:\Users\ivand\source\repos\Gestión Hotel\Gestión Hotel\obj\Debug\Gestión Hotel.csproj.CoreCompileInputs.cache
+C:\Users\ivand\source\repos\Gestión Hotel\Gestión Hotel\bin\Debug\Gestión Hotel.exe.config
+C:\Users\ivand\source\repos\Gestión Hotel\Gestión Hotel\bin\Debug\Gestión Hotel.exe
+C:\Users\ivand\source\repos\Gestión Hotel\Gestión Hotel\bin\Debug\Gestión Hotel.pdb
+C:\Users\ivand\source\repos\Gestión Hotel\Gestión Hotel\obj\Debug\Gestión Hotel.exe
+C:\Users\ivand\source\repos\Gestión Hotel\Gestión Hotel\obj\Debug\Gestión Hotel.pdb
+C:\Users\ivand\OneDrive\Escritorio\Gestión Hotel\obj\Debug\Gestión Hotel.csprojAssemblyReference.cache
+C:\Users\ivand\OneDrive\Escritorio\Gestión Hotel\obj\Debug\Gestión Hotel.csproj.CoreCompileInputs.cache
+C:\Users\ivand\OneDrive\Escritorio\Gestión Hotel\obj\Debug\Gestión Hotel.exe
+C:\Users\ivand\OneDrive\Escritorio\Gestión Hotel\obj\Debug\Gestión Hotel.pdb
+C:\Users\ivand\OneDrive\Escritorio\Hotel\Gestión Hotel\obj\Debug\Gestión Hotel.csprojAssemblyReference.cache
+C:\Users\ivand\OneDrive\Escritorio\Hotel\Gestión Hotel\obj\Debug\Gestión Hotel.csproj.CoreCompileInputs.cache
+C:\Users\ivand\OneDrive\Escritorio\Hotel\Gestión Hotel\obj\Debug\Gestión Hotel.exe
+C:\Users\ivand\OneDrive\Escritorio\Hotel\Gestión Hotel\obj\Debug\Gestión Hotel.pdb
+C:\Users\ivand\OneDrive\Escritorio\Hotel\Gestión Hotel\bin\Debug\Gestión Hotel.exe.config
+C:\Users\ivand\OneDrive\Escritorio\Hotel\Gestión Hotel\bin\Debug\Gestión Hotel.exe
+C:\Users\ivand\OneDrive\Escritorio\Hotel\Gestión Hotel\bin\Debug\Gestión Hotel.pdb
+C:\Users\Patri\Desktop\Clientes\Gestión Hotel\bin\Debug\Gestión Hotel.exe.config
+C:\Users\Patri\Desktop\Clientes\Gestión Hotel\bin\Debug\Gestión Hotel.exe
+C:\Users\Patri\Desktop\Clientes\Gestión Hotel\bin\Debug\Gestión Hotel.pdb
+C:\Users\Patri\Desktop\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.csprojAssemblyReference.cache
+C:\Users\Patri\Desktop\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.csproj.CoreCompileInputs.cache
+C:\Users\Patri\Desktop\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.exe
+C:\Users\Patri\Desktop\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.pdb
