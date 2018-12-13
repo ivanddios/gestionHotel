@@ -304,6 +304,7 @@
         private void OnQuit()
         {
             RegistroReservas.GuardarXml("registro_reservas.xml", this.reservas);
+            this.ClienteCore.RegistroClientes.GuardaXml();
             this.HabitacionCore.Registro.GuardaXml();
             Application.Exit();
         }
@@ -312,6 +313,7 @@
         {
 
             RegistroReservas.GuardarXml("registro_reservas.xml", this.reservas);
+            this.ClienteCore.RegistroClientes.GuardaXml();
             this.HabitacionCore.Registro.GuardaXml();
             Application.Exit();
         }

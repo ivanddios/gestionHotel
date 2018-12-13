@@ -14,4 +14,11 @@
     <fechaRenovacion>12/02/2009</fechaRenovacion>
     <comodidades>Wifi, Mini Bar, TV</comodidades>
   </habitacion>
+  <habitacion>
+    <tipo>doble</tipo>
+    <fechaReserva>13/12/2018</fechaReserva>
+    <identificador>1</identificador>
+    <fechaRenovacion>13/12/2018</fechaRenovacion>
+    <comodidades>Wifi</comodidades>
+  </habitacion>
 </habitaciones>

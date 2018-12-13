@@ -129,8 +129,15 @@ public class RegistroReservas : ICollection<Reserva>
                              new XAttribute("id", reserva.IdReserva),
                              //new XElement("cliente", new XElement("apellidos", reserva.Cliente.Apellidos),
                              //           new XElement("nombre", reserva.Cliente.Nombre)),
-                             new XElement("cliente", new XElement("dni", reserva.Habitacion.Identificador)),
-                             new XElement("habitacion", new XAttribute("id", reserva.Habitacion.Identificador),
+                             new XElement("cliente",
+                                                    new XElement("nombre", reserva.Cliente.Nombre),
+                                                    new XElement("dni", reserva.Cliente.Dni),
+                                                    new XElement("telefono", reserva.Cliente.Telefono),
+                                                    new XElement("email", reserva.Cliente.Email),
+                                                    new XElement("direccion", reserva.Cliente.Direccion)
+                                         ),
+                             new XElement("habitacion", 
+                                          new XAttribute("id", reserva.Habitacion.Identificador),
 				                          new XElement("tipo", reserva.Habitacion.Tipo),
                                           new XElement("fechaReserva", reserva.Habitacion.FechaReserva),
                                           new XElement("fechaRenovacion", reserva.Habitacion.FechaRenovacion),
@@ -169,9 +176,15 @@ public class RegistroReservas : ICollection<Reserva>
         {
 
 			XElement clienteElement = reservaElement.Element("cliente");
-			//Cliente cliente = new Cliente((string)clienteElement.Element("nombre"), (string)clienteElement.Element("apellidos"));
-            var clientes = RegistroClientes.RecuperaXml();
-            Cliente cliente = clientes.getUsuario((string)clienteElement.Element("dni"));
+			Cliente cliente = new Cliente(
+                                        (string)clienteElement.Element("nombre"),
+                                        (string)clienteElement.Element("dni"),
+                                        (int)clienteElement.Element("telefono"),
+                                        (string)clienteElement.Element("email"),
+                                        (string)clienteElement.Element("direccion")
+                                        );
+            
+
 			XElement habitacionElement = reservaElement.Element("habitacion");
 			Habitacion habitacion = new Habitacion((string)habitacionElement.Element("tipo"),
                                             (string)habitacionElement.Element("fechaReserva"),

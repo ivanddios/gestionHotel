@@ -296,7 +296,7 @@ namespace ReservasHotel.View
                 precioTarifaGaraje = 2;
             }
 
-            if (row.Cells[1].Value.ToString() == "matrimonio")
+            if (row.Cells[1].Value.ToString() == "doble")
             {
                 this.edTarifa.Value = 20 + precioTarifaGaraje;
             }

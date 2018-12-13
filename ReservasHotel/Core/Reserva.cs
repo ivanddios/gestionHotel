@@ -121,7 +121,7 @@ public class Reserva
 		toret.Append(this.FechaEntrada.ToString("yyyy/MM/dd HH:mm:ss"));
         toret.Append(" - ");
 		toret.AppendLine(this.FechaSalida.ToString("yyyy/MM/dd HH:mm:ss"));
-        toret.AppendLine(Cliente.ToString());
+        toret.AppendLine(this.Cliente.ToString());
         toret.Append("Utiliza el garaje: ");
 		toret.AppendLine(this.UsaGaraje.ToString());
         toret.Append(this.TarifaDia.ToString());
