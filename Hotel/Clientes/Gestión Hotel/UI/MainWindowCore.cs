@@ -36,6 +36,10 @@ namespace Gestión_Hotel.UI
             //Case Eliminar-Cliente
             else if (this.MainWindowViewClientes.GrdListaClientes.CurrentCell.ColumnIndex == 7)
             {
+                this.EliminarCliente();
+            }
+            else if (this.MainWindowViewClientes.GrdListaClientes.CurrentCell.ColumnIndex == 8)
+            {
                 string DNI = (string)this.MainWindowViewClientes.GrdListaClientes.CurrentRow.Cells[2].Value;
 
                 GestionDeHoteles.GUI.MainWindow main = new GestionDeHoteles.GUI.MainWindow(new GestionDeHoteles.XML.XMLBrowser(), 1280, 720);
@@ -43,8 +47,6 @@ namespace Gestión_Hotel.UI
                 main.setGraficoCliente(DNI);
                 Gtk.Application.Run();
 
-
-                //this.EliminarCliente();
             }
         }
 

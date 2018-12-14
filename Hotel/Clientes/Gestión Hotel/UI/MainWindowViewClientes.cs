@@ -203,10 +203,18 @@ namespace Gestión_Hotel.UI
 
             };
 
+            var column8 = new DataGridViewButtonColumn()
+            {
+                HeaderText = "Acción",
+                Text = "Gráfico",
+                UseColumnTextForButtonValue = true,
+                ReadOnly = true,
+                Width = 15
 
+            };
 
             this.GrdListaClientes.Columns.AddRange(new DataGridViewColumn[] {
-                column0, column1, column2, column3,column4,column5,column6, column7
+                column0, column1, column2, column3,column4,column5,column6, column7,column8
             });
 
             this.pnlLista.Controls.Add(this.GrdListaClientes);
@@ -233,12 +241,14 @@ namespace Gestión_Hotel.UI
             this.GrdListaClientes.Columns[3].Width =
                                (int)System.Math.Floor(width * .08);
             this.GrdListaClientes.Columns[4].Width =
-                                (int)System.Math.Floor(width * .20);
+                                (int)System.Math.Floor(width * .16);
             this.GrdListaClientes.Columns[5].Width =
-                                (int)System.Math.Floor(width * .21);
+                                (int)System.Math.Floor(width * .16);
             this.GrdListaClientes.Columns[6].Width =
                                 (int)System.Math.Floor(width * .10);
             this.GrdListaClientes.Columns[7].Width =
+                                (int)System.Math.Floor(width * .09);
+            this.GrdListaClientes.Columns[8].Width =
                                 (int)System.Math.Floor(width * .09);
         }
 
