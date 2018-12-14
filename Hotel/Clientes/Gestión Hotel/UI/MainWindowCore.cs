@@ -11,11 +11,6 @@ namespace Gestión_Hotel.UI
 
         public MainWindowCore(MainWindowViewClientes mvc)
         {
-            this.LoadMainWindowViewClientes(mvc);
-        }
-
-        void LoadMainWindowViewClientes(MainWindowViewClientes mvc)
-        {
             //this.MainWindowViewClientes = new MainWindowViewClientes();
             this.MainWindowViewClientes = mvc;
             this.RegistroClientes = RegistroClientes.RecuperaXml();
@@ -41,8 +36,15 @@ namespace Gestión_Hotel.UI
             //Case Eliminar-Cliente
             else if (this.MainWindowViewClientes.GrdListaClientes.CurrentCell.ColumnIndex == 7)
             {
-                // this.EliminarCliente();
-                this.MainWindowViewClientes.pnlPpal.Controls.Remove(this.MainWindowViewClientes.pnlLista);
+                string DNI = (string)this.MainWindowViewClientes.GrdListaClientes.CurrentRow.Cells[2].Value;
+
+                GestionDeHoteles.GUI.MainWindow main = new GestionDeHoteles.GUI.MainWindow(new GestionDeHoteles.XML.XMLBrowser(), 1280, 720);
+                main.Show();
+                main.setGraficoCliente(DNI);
+                Gtk.Application.Run();
+
+
+                //this.EliminarCliente();
             }
         }
 
