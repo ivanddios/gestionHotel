@@ -11,7 +11,7 @@ namespace ReservasHotel
         public static void Main(string[] args)
         {
 
-            //Gtk.Application.Init();
+            Gtk.Application.Init();
             var mainForm = new MainWindow();
             Application.Run(mainForm);
         }
