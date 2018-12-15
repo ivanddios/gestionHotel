@@ -106,7 +106,7 @@ namespace Habitaciones.UI
         }
 
 
-        void Actualiza()
+        public void Actualiza()
         {
             int numElementos = this.Registro.Count;
             //this.MainWindowView.SbStatus.Text = ("Numero reparaciones : " + numElementos);

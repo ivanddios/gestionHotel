@@ -75,6 +75,7 @@
          */
         private void mostrarHabitaciones()
         {
+            this.habitaciones = RegistroHabitaciones.RecuperaXml();
             this.pnlPpal.Controls.Clear();
             this.pnlPpal.Controls.Add(this.pnlHabitaciones);
             this.HabitacionView.ResizeWindow();
@@ -102,7 +103,7 @@
         {
             var habitaciones = RegistroHabitaciones.RecuperaXml();
 
-            var dlgAltaReserva = new DlgAltaReserva(habitaciones, null, clientes);
+            var dlgAltaReserva = new DlgAltaReserva(habitaciones, null, this.clientes);
 
 
             if (dlgAltaReserva.ShowDialog() == DialogResult.OK)
@@ -112,24 +113,28 @@
                  var reserva = new Reserva(h, dlgAltaReserva.cliente,
                     dlgAltaReserva.FechaEntrada, dlgAltaReserva.FechaSalida, dlgAltaReserva.UsaGaraje, dlgAltaReserva.Tarifa);
                 this.reservas.Add(reserva);
-                
 
                 
-              for(int i=0; i<this.habitaciones.Count; i++)
+                for (int i=0; i<this.habitaciones.Count; i++)
                 {
-                   if(this.habitaciones[i].Identificador == h.Identificador){
-                        this.habitaciones[i].FechaReserva = h.FechaReserva;
-                }
+                    Console.WriteLine("Borrar: " + habitaciones[i].Identificador + " " + h.Identificador);
+                    Console.WriteLine("Posible borrado hab: " + this.HabitacionCore.Registro.getHabitacion(habitaciones[i].Identificador).ToString());
+                    if (this.habitaciones[i].Identificador == h.Identificador){
+                       
+                        Console.WriteLine("Borrar: " + habitaciones[i].Identificador + " " + h.Identificador);
+                        //this.habitaciones[i].FechaReserva = h.FechaReserva;
+                        //Console.WriteLine(this.HabitacionCore.Registro.Remove(habitaciones[i]));
+                        this.HabitacionCore.Registro.RemoveAt(i);
+
+                    }
                 
                 }
-                
-                this.habitaciones.GuardaXml();
 
-                //dlgAltaReserva.habitacion.Identificador
+                this.HabitacionCore.Registro.Add(h);
 
-               // this.habitaciones.Remove(dlgAltaReserva.habitacion);
-                //this.habitaciones.Add(dlgAltaReserva.)
-
+                this.HabitacionCore.Registro.GuardaXml();
+                this.habitaciones = RegistroHabitaciones.RecuperaXml();
+                this.HabitacionCore.Actualiza();
                 Console.WriteLine(reserva);
                 this.ActualizaListaReservas(0);
 
@@ -237,7 +242,8 @@
                             var nuevaReserva = new Reserva(dlgAltaReserva.habitacion, dlgAltaReserva.cliente,
                                 dlgAltaReserva.FechaEntrada, dlgAltaReserva.FechaSalida, dlgAltaReserva.UsaGaraje, dlgAltaReserva.Tarifa);
                             this.reservas.Add(nuevaReserva);
-
+                        Console.WriteLine("NUEVA RESRVA");
+                        Console.WriteLine(nuevaReserva);
                             actualizarReservas();
 
                         }

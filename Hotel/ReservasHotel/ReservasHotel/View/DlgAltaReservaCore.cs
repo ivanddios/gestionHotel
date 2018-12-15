@@ -17,7 +17,7 @@ namespace ReservasHotel.View
             this.Build();
             this.habitaciones = hab;
             this.clientes = c;
-            this.ActualizaListaClientes(0);
+            this.ActualizaListaClientes(0, this.clientes);
             this.grdLista.SelectionChanged += (sender, e) => this.FilaSeleccionada();
             this.grdListaClientes.SelectionChanged += (sender, e) => this.FilaSeleccionadaClientes();
             if (reservaModificar != null)
@@ -26,7 +26,11 @@ namespace ReservasHotel.View
                 var lista = new List<Habitacion>();
                 lista.Add(this.reservaModificar.Habitacion);
                 ActualizaListaHabitaciones(0, lista);
+                var listaClientes = new RegistroClientes();
+                listaClientes.Add(this.reservaModificar.Cliente);
+                ActualizaListaClientes(0,listaClientes);
             }
+
 
         }
 
@@ -100,7 +104,6 @@ namespace ReservasHotel.View
                 }  
             }
             ActualizaListaHabitaciones(0, habDisponibles);
-            //Console.WriteLine("Tabla acutalizada");
             
            
 
@@ -160,9 +163,9 @@ namespace ReservasHotel.View
         }
 
 
-        private void ActualizaListaClientes(int numRow)
+        private void ActualizaListaClientes(int numRow, RegistroClientes clientes)
         {
-            int numRecorridos = this.clientes.Count;
+            int numRecorridos = clientes.Count;
 
             // Crea y actualiza filas
             for (int i = numRow; i < numRecorridos; ++i)
@@ -172,7 +175,7 @@ namespace ReservasHotel.View
                     this.grdListaClientes.Rows.Add();
                 }
 
-                this.ActualizaFilaDeListaClientes(i, this.clientes);
+                this.ActualizaFilaDeListaClientes(i, clientes);
             }
 
             // Eliminar filas sobrantes
@@ -206,21 +209,19 @@ namespace ReservasHotel.View
             {
                 cell.ToolTipText = cliente.ToString();
             }
-            this.FilaSeleccionada();
+            this.FilaSeleccionadaClientes();
             return;
         }
 
         private void FilaSeleccionada()
         {
-            //DataGridViewRow fila = this.grdLista.CurrentRow;
+
             foreach (DataGridViewRow row in grdLista.SelectedRows)
             {
                 if (row.Cells[0].Value != null)
                 {
-                    //var hab = new Habitacion(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString());
-                    Console.WriteLine("habitacion" + row.Cells[0].Value);
+
                     var hab = this.habitaciones.getHabitacion((int)row.Cells[0].Value);
-                    //hab.FechaReserva=this.FechaEntrada.ToString();
                     this.habitacion = hab;
 
                     ActualizarTarifaHabitacion(row);
@@ -242,12 +243,7 @@ namespace ReservasHotel.View
                     var cli = this.clientes.getUsuario(row.Cells[0].Value.ToString());
                     this.cliente = cli;
 
-                    ActualizarTarifaHabitacion(row);
-
                 }
-
-
-
 
             }
         }

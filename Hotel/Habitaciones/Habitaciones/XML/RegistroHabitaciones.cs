@@ -145,6 +145,11 @@ namespace Habitaciones.XML
             return this.habitaciones.Remove(habitacion);
         }
 
+        public void RemoveAt(int i)
+        {
+            this.habitaciones.RemoveAt(i);
+        }
+
         public void Clear()
         {
             this.habitaciones.Clear();

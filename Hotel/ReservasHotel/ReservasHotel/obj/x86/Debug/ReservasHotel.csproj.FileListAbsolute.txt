@@ -65,7 +65,6 @@ C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHot
 C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.pdb
 C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.exe.config
 C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.pdb
-C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.xml
 C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.exe.config
 C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\atk-sharp.pdb
 C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\gdk-sharp.pdb

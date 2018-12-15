@@ -127,8 +127,6 @@ public class RegistroReservas : ICollection<Reserva>
             root.Add(
                 new XElement("reserva",
                              new XAttribute("id", reserva.IdReserva),
-                             //new XElement("cliente", new XElement("apellidos", reserva.Cliente.Apellidos),
-                             //           new XElement("nombre", reserva.Cliente.Nombre)),
                              new XElement("cliente",
                                                     new XElement("nombre", reserva.Cliente.Nombre),
                                                     new XElement("dni", reserva.Cliente.Dni),

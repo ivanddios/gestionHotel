@@ -20,64 +20,44 @@
     <tarifa iva="0.21">10</tarifa>
     <total>36.3</total>
   </reserva>
-  <reserva id="20190316100">
+  <reserva id="20181217209">
     <cliente>
-      <nombre>Daniel González Pérez</nombre>
-      <dni>44488705H</dni>
-      <telefono>678876543</telefono>
-      <email>danielgpr@yahoo.es</email>
-      <direccion>Plaza del Couto 88, 9º B</direccion>
+      <nombre>Iván de Dios Fernández</nombre>
+      <dni>44488795X</dni>
+      <telefono>988252875</telefono>
+      <email>ivanddf1994@gmail.com</email>
+      <direccion>Avenida Vistahermosa 8, 3º A</direccion>
     </cliente>
-    <habitacion id="100">
+    <habitacion id="209">
       <tipo>individual</tipo>
-      <fechaReserva>12/2/2018</fechaReserva>
-      <fechaRenovacion>12/6/2018</fechaRenovacion>
-      <comodidades>Wifi</comodidades>
+      <fechaReserva>17/12/2018 23:34:39</fechaReserva>
+      <fechaRenovacion>15/12/2018</fechaRenovacion>
+      <comodidades>wifi</comodidades>
     </habitacion>
-    <fechaEntrada>2019/03/16 02:33:03</fechaEntrada>
-    <fechaSalida>2019/03/21 02:33:03</fechaSalida>
+    <fechaEntrada>2018/12/17 23:34:39</fechaEntrada>
+    <fechaSalida>2018/12/19 23:34:39</fechaSalida>
     <garaje>false</garaje>
     <tarifa iva="0.21">10</tarifa>
-    <total>60.5</total>
+    <total>24.2</total>
   </reserva>
-  <reserva id="20181221100">
+  <reserva id="20181217209">
     <cliente>
-      <nombre>Daniel González Pérez</nombre>
-      <dni>44488705H</dni>
-      <telefono>678876543</telefono>
-      <email>danielgpr@yahoo.es</email>
-      <direccion>Plaza del Couto 88, 9º B</direccion>
+      <nombre>Yeray Lage Freitas</nombre>
+      <dni>45567832R</dni>
+      <telefono>666999087</telefono>
+      <email>yeraylage@gmail.com</email>
+      <direccion>C/ Rosalía de Castro 79</direccion>
     </cliente>
-    <habitacion id="100">
+    <habitacion id="209">
       <tipo>individual</tipo>
-      <fechaReserva>21/12/2018 19:18:37</fechaReserva>
-      <fechaRenovacion>12/6/2018</fechaRenovacion>
-      <comodidades>Wifi</comodidades>
+      <fechaReserva>17/12/2018 23:34:39</fechaReserva>
+      <fechaRenovacion>15/12/2018</fechaRenovacion>
+      <comodidades>wifi</comodidades>
     </habitacion>
-    <fechaEntrada>2018/12/21 19:18:37</fechaEntrada>
-    <fechaSalida>2018/12/28 19:18:37</fechaSalida>
-    <garaje>false</garaje>
-    <tarifa iva="0.21">10</tarifa>
-    <total>84.7</total>
-  </reserva>
-  <reserva id="20190110100">
-    <cliente>
-      <nombre>Daniel González Pérez</nombre>
-      <dni>44488705H</dni>
-      <telefono>678876543</telefono>
-      <email>danielgpr@yahoo.es</email>
-      <direccion>Plaza del Couto 88, 9º B</direccion>
-    </cliente>
-    <habitacion id="100">
-      <tipo>individual</tipo>
-      <fechaReserva>10/01/2019 19:34:00</fechaReserva>
-      <fechaRenovacion>12/6/2018</fechaRenovacion>
-      <comodidades>Wifi</comodidades>
-    </habitacion>
-    <fechaEntrada>2019/01/10 19:34:00</fechaEntrada>
-    <fechaSalida>2019/01/25 19:34:00</fechaSalida>
-    <garaje>false</garaje>
-    <tarifa iva="0.21">10</tarifa>
-    <total>181.5</total>
+    <fechaEntrada>2018/12/17 23:33:27</fechaEntrada>
+    <fechaSalida>2018/12/18 23:33:27</fechaSalida>
+    <garaje>true</garaje>
+    <tarifa iva="0.21">12</tarifa>
+    <total>14.52</total>
   </reserva>
 </reservas>
