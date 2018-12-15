@@ -45,6 +45,7 @@
 
             //Operaciones RESERVASS
             this.OpConsultarReservas.Click += (sender, e) => this.mostrarReservas();
+            this.OpGraficos.Click += (sender, e) => this.generarGrafico();
 
             this.OpAltaReserva.Click += (sender, e) => this.AltaReserva();
             this.FormClosed += (sender, e) => this.OnQuit();
@@ -338,12 +339,12 @@
 
         private void generarGrafico()
         {
-            DataGridViewRow fila = this.grdLista.CurrentRow;
-
-            if (fila != null)
-            {
-                var idReserva = this.reservas.getReserva(fila.Cells[1].Value.ToString());
-            }
+            
+                GestionDeHoteles.GUI.MainWindow main = new GestionDeHoteles.GUI.MainWindow(new GestionDeHoteles.XML.XMLBrowser(), 1280, 720);
+                main.Show();
+                main.setGraficoGeneral();
+                Gtk.Application.Run();
+            
         }
 
 

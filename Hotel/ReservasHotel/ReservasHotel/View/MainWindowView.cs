@@ -97,8 +97,7 @@ namespace ReservasHotel.View
             //Operaciones de menu RESERVAS
             this.OpConsultarReservas = new MenuItem("&Consultar");
             this.OpAltaReserva = new MenuItem("&Nueva");
-            this.OpBajaReserva = new MenuItem("&Baja");
-            this.OpModificacionReserva = new MenuItem("&Modificacion");
+            this.OpGraficos= new MenuItem("&Gráficos");
             
             //Agregacion de las operaciones a los elementos
             this.mArchivo.MenuItems.Add(this.OpSalir);
@@ -111,10 +110,10 @@ namespace ReservasHotel.View
             this.mHabitaciones.MenuItems.Add(this.OpConsultarHabitaciones);
             this.mHabitaciones.MenuItems.Add(this.OpInsertarHabitacion);
 
+            //Agregacion operaciones de RESERVAS
             this.mReservas.MenuItems.Add(this.OpConsultarReservas);
             this.mReservas.MenuItems.Add(this.OpAltaReserva);
-			//this.mReservas.MenuItems.Add(this.OpModificacionReserva);
-			//this.mReservas.MenuItems.Add(this.OpBajaReserva);
+			this.mReservas.MenuItems.Add(this.OpGraficos);
 
             //Agregacion de los elementos al menu
             this.mPpal.MenuItems.Add(this.mArchivo);
@@ -301,16 +300,10 @@ namespace ReservasHotel.View
                 Text = "&Factura"
             };
 
-            this.btGrafico = new Button()
-            {
-                Text = "&Gráfico"
-            };
-
 
             this.btModificar.Click += (sender, e) => this.modificarReserva();
             this.btEliminar.Click += (sender, e) => this.eliminarReserva();
             this.btFactura.Click += (sender, e) => this.generarFactura();
-            this.btGrafico.Click += (sender, e) => this.generarGrafico();
 
             toret.Controls.Add(btModificar);
             toret.Controls.Add(btEliminar);
@@ -324,7 +317,6 @@ namespace ReservasHotel.View
         private Button btEliminar;
         private Button btModificar;
         private Button btFactura;
-        private Button btGrafico;
 
 
         public MainMenu Mpal { get; set; }
@@ -336,10 +328,11 @@ namespace ReservasHotel.View
 
 		public MenuItem OpConsultarReservas { get; set; }
         public MenuItem OpAltaReserva { get; set; }
-        public MenuItem OpBajaReserva { get; set; }
-        public MenuItem OpModificacionReserva { get; set; }
+        public MenuItem OpGraficos { get; set; }
+
         public MenuItem OpConsultarHabitaciones { get; set; }
         public MenuItem OpInsertarHabitacion { get; set; }
+
         public MenuItem OpConsultarClientes { get; set; }
         public MenuItem OpInsertarCliente { get; set; }
     }
