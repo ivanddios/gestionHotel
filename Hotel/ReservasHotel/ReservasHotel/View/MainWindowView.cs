@@ -11,6 +11,7 @@ namespace ReservasHotel.View
         private MenuItem mArchivo;
 
         private Panel pnlPpal;
+        private Panel pnl;
         private Panel pnlHabitaciones;
         private Panel pnlClientes;
         public DataGridView grdLista;
@@ -20,8 +21,6 @@ namespace ReservasHotel.View
         private void Build()
         {
             this.BuildMenu();
-            //this.BuildPanelLista();
-            //this.BuildPnlBotones();
 
             this.SuspendLayout();
             this.pnlPpal = new Panel()
@@ -44,6 +43,33 @@ namespace ReservasHotel.View
             this.ResizeWindow();
 
             this.Show();
+        }
+
+        private Panel BuildPanel()
+        {
+            //this.BuildMenu();
+
+            //this.SuspendLayout();
+            this.pnl = new Panel()
+            {
+                Dock = DockStyle.Fill
+            };
+
+            //this.pnlPpal.SuspendLayout();
+            //this.Controls.Add(this.pnlPpal);
+            this.pnl.Controls.Add(this.BuildPanelLista());
+            this.pnl.Controls.Add(this.BuildPanelDetalle());
+            this.pnl.Controls.Add(this.BuildPnlBotones());
+            //this.pnlPpal.ResumeLayout(false);
+            this.pnl.Resize += (obj, e) => this.ResizeWindow();
+            //this.MinimumSize = new Size(900, 600);
+            //this.Resize += (obj, e) => this.ResizeWindow();
+            //this.Text = "Hotel";
+
+            this.ResumeLayout(true);
+            this.ResizeWindow();
+
+            return pnl;
         }
 
         private void BuildMenu()
@@ -69,7 +95,7 @@ namespace ReservasHotel.View
             this.OpInsertarHabitacion = new MenuItem("&Insertar");
 
             //Operaciones de menu RESERVAS
-            this.OpConsultarReserva = new MenuItem("&Consultar");
+            this.OpConsultarReservas = new MenuItem("&Consultar");
             this.OpAltaReserva = new MenuItem("&Nueva");
             this.OpBajaReserva = new MenuItem("&Baja");
             this.OpModificacionReserva = new MenuItem("&Modificacion");
@@ -85,7 +111,7 @@ namespace ReservasHotel.View
             this.mHabitaciones.MenuItems.Add(this.OpConsultarHabitaciones);
             this.mHabitaciones.MenuItems.Add(this.OpInsertarHabitacion);
 
-            //this.mReservas.MenuItems.Add(this.OpConsultarReserva);
+            this.mReservas.MenuItems.Add(this.OpConsultarReservas);
             this.mReservas.MenuItems.Add(this.OpAltaReserva);
 			//this.mReservas.MenuItems.Add(this.OpModificacionReserva);
 			//this.mReservas.MenuItems.Add(this.OpBajaReserva);
@@ -275,10 +301,16 @@ namespace ReservasHotel.View
                 Text = "&Factura"
             };
 
+            this.btGrafico = new Button()
+            {
+                Text = "&Gráfico"
+            };
+
 
             this.btModificar.Click += (sender, e) => this.modificarReserva();
             this.btEliminar.Click += (sender, e) => this.eliminarReserva();
             this.btFactura.Click += (sender, e) => this.generarFactura();
+            this.btGrafico.Click += (sender, e) => this.generarGrafico();
 
             toret.Controls.Add(btModificar);
             toret.Controls.Add(btEliminar);
@@ -292,6 +324,7 @@ namespace ReservasHotel.View
         private Button btEliminar;
         private Button btModificar;
         private Button btFactura;
+        private Button btGrafico;
 
 
         public MainMenu Mpal { get; set; }
@@ -301,7 +334,7 @@ namespace ReservasHotel.View
 		public MenuItem mHabitaciones { get; set; }
 		public MenuItem mReservas { get; set; }
 
-		public MenuItem OpConsultarReserva { get; set; }
+		public MenuItem OpConsultarReservas { get; set; }
         public MenuItem OpAltaReserva { get; set; }
         public MenuItem OpBajaReserva { get; set; }
         public MenuItem OpModificacionReserva { get; set; }

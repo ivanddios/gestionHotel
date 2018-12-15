@@ -18,12 +18,11 @@
     {
         public MainWindow()
         {
-            this.Build();
-			
+            //Creacion ventana principal
+            this.Build();	
             this.reservas = RegistroReservas.RecuperarXml("registro_reservas.xml");
             this.habitaciones = RegistroHabitaciones.RecuperaXml();
             this.clientes = RegistroClientes.RecuperaXml();
-
             this.ActualizaListaReservas(0);
 
             //Integracion CLIENTES
@@ -36,21 +35,27 @@
             this.pnlHabitaciones = this.HabitacionView.BuildGUI();
             this.HabitacionCore = new Habitaciones.UI.MainWindowCore(this.HabitacionView);
 
-            //Consultar clientes
+            //Operaciones CLIENTES
             this.OpConsultarClientes.Click += (sender, e) => this.mostrarClientes();
-            //Insertar clientes
             this.OpInsertarCliente.Click += (sender, e) => this.insertarCliente();
 
-            //Consultar habitaciones
+            //Operaciones HABITACIONES
             this.OpConsultarHabitaciones.Click += (sender, e) => this.mostrarHabitaciones();
-            //Insertar habitacion
             this.OpInsertarHabitacion.Click += (sender, e) => this.insertarHabitacion();
+
+            //Operaciones RESERVASS
+            this.OpConsultarReservas.Click += (sender, e) => this.mostrarReservas();
 
             this.OpAltaReserva.Click += (sender, e) => this.AltaReserva();
             this.FormClosed += (sender, e) => this.OnQuit();
 
         }
 
+
+
+        /*
+         * Metodos Clientes
+         */
         private void mostrarClientes()
         {
             this.pnlPpal.Controls.Clear();
@@ -62,13 +67,11 @@
         {
             this.ClienteCore.InsertarCliente();
 
-           
-            //GestionDeHoteles.GUI.MainWindow main = new GestionDeHoteles.GUI.MainWindow(new GestionDeHoteles.XML.XMLBrowser(), 1280, 720);
-            //main.Show();
-            //Gtk.Application.Run();
-
         }
 
+        /*
+         * Metodos Habitaciones
+         */
         private void mostrarHabitaciones()
         {
             this.pnlPpal.Controls.Clear();
@@ -82,9 +85,19 @@
             this.HabitacionCore.BuildHabitacion();
         }
 
+        /*
+         * Metodos Reservas
+         */
+         
+        private void mostrarReservas()
+        {
+            this.pnlPpal.Controls.Clear();
+            this.pnlPpal.Controls.Add(this.BuildPanel());
+            this.ResizeWindow();
+            this.ActualizaListaReservas(0);
+        }
 
-
-		private void AltaReserva()
+        private void AltaReserva()
         {
             var habitaciones = RegistroHabitaciones.RecuperaXml();
 
@@ -320,11 +333,19 @@
 
 
             }
-           
 
-       
-        
         }
+
+        private void generarGrafico()
+        {
+            DataGridViewRow fila = this.grdLista.CurrentRow;
+
+            if (fila != null)
+            {
+                var idReserva = this.reservas.getReserva(fila.Cells[1].Value.ToString());
+            }
+        }
+
 
 
 

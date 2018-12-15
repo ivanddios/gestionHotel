@@ -27,6 +27,7 @@ namespace Gestión_Hotel.UI
             //this.Controls.Add(this.pnlPpal);
             this.pnlPpal.Controls.Add(this.BuildPanelLista());
             this.pnlPpal.ResumeLayout(false);
+            this.pnlPpal.Resize += (obj, e) => this.ResizeWindow();
 
             /*this.MinimumSize = new Size(885, 500);
             this.Resize += (obj, e) => this.ResizeWindow();

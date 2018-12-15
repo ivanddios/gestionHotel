@@ -48,3 +48,31 @@ C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHote
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csproj.CopyComplete
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.exe
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.pdb
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\ReservasHotel.exe.config
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\ReservasHotel.exe
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\ReservasHotel.pdb
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\atk-sharp.dll
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\gdk-sharp.dll
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.exe
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.exe
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\glib-sharp.dll
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\gtk-sharp.dll
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.exe
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Mono.Cairo.dll
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\pango-sharp.dll
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.pdb
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.exe.config
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.pdb
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.exe.config
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.pdb
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.xml
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.exe.config
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\atk-sharp.pdb
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\gdk-sharp.pdb
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\glib-sharp.pdb
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\pango-sharp.pdb
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csprojAssemblyReference.cache
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csproj.CoreCompileInputs.cache
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csproj.CopyComplete
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.exe
+C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.pdb
