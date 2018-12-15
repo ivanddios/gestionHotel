@@ -9,9 +9,16 @@
   </habitacion>
   <habitacion>
     <tipo>individual</tipo>
-    <fechaReserva>17/12/2018 23:34:39</fechaReserva>
+    <fechaReserva>22/12/2018 0:42:24</fechaReserva>
     <identificador>209</identificador>
     <fechaRenovacion>15/12/2018</fechaRenovacion>
     <comodidades>wifi</comodidades>
+  </habitacion>
+  <habitacion>
+    <tipo>doble</tipo>
+    <fechaReserva>25/12/2018 0:44:45</fechaReserva>
+    <identificador>2</identificador>
+    <fechaRenovacion>16/12/2018</fechaRenovacion>
+    <comodidades>TV</comodidades>
   </habitacion>
 </habitaciones>

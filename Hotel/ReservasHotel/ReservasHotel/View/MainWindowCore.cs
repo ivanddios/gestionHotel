@@ -131,12 +131,13 @@
                 }
 
                 this.HabitacionCore.Registro.Add(h);
-
                 this.HabitacionCore.Registro.GuardaXml();
                 this.habitaciones = RegistroHabitaciones.RecuperaXml();
                 this.HabitacionCore.Actualiza();
+
                 Console.WriteLine(reserva);
-                this.ActualizaListaReservas(0);
+                actualizarReservas();
+              
 
             }
            
