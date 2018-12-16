@@ -37,7 +37,6 @@ C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHote
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.pdb
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.exe.config
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.pdb
-C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.xml
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.exe.config
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\atk-sharp.pdb
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\gdk-sharp.pdb

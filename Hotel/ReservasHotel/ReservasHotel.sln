@@ -6,9 +6,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservasHotel", "ReservasHo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Habitaciones", "..\Habitaciones\Habitaciones\Habitaciones.csproj", "{31D35D0B-4EAB-45CD-997B-635C1B2A72A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestión Hotel", "..\Clientes\Gestión Hotel\Gestión Hotel.csproj", "{BCC73AB8-C997-4D89-96BB-E79EC9335DC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clientes", "..\Clientes\Gestión Hotel\Clientes.csproj", "{BCC73AB8-C997-4D89-96BB-E79EC9335DC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDeHoteles", "..\GestionDeHoteles\GestionDeHoteles\GestionDeHoteles.csproj", "{CDA84B60-9FB0-42C4-8A77-77F5C417C08F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gráficos", "..\GestionDeHoteles\GestionDeHoteles\Gráficos.csproj", "{CDA84B60-9FB0-42C4-8A77-77F5C417C08F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

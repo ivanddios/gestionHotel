@@ -60,4 +60,24 @@
     <tarifa iva="0.21">12</tarifa>
     <total>14.52</total>
   </reserva>
+  <reserva id="20171217209">
+    <cliente>
+      <nombre>Yeray Lage Freitas</nombre>
+      <dni>45567832R</dni>
+      <telefono>666999087</telefono>
+      <email>yeraylage@gmail.com</email>
+      <direccion>C/ Rosalía de Castro 79</direccion>
+    </cliente>
+    <habitacion id="209">
+      <tipo>individual</tipo>
+      <fechaReserva>17/12/2017 23:34:39</fechaReserva>
+      <fechaRenovacion>15/12/2017</fechaRenovacion>
+      <comodidades>wifi</comodidades>
+    </habitacion>
+    <fechaEntrada>2017/12/17 23:33:27</fechaEntrada>
+    <fechaSalida>2017/12/18 23:33:27</fechaSalida>
+    <garaje>true</garaje>
+    <tarifa iva="0.21">12</tarifa>
+    <total>14.52</total>
+  </reserva>
 </reservas>
