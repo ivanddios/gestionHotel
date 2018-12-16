@@ -192,10 +192,21 @@ namespace Habitaciones.UI
 
             };
 
+            var column8 = new DataGridViewButtonColumn()
+            {
+                HeaderText = "Acción",
+                Text = "Gráfico",
+                UseColumnTextForButtonValue = true,
+                ReadOnly = true,
+                Width = 15
+
+            };
+
+
 
 
             this.GrdLista.Columns.AddRange(new DataGridViewColumn[] {
-                column0, column1, column2, column3,column4,column5,column6, column7
+                column0, column1, column2, column3,column4,column5,column6, column7, column8
             });
 
             this.pnlLista.Controls.Add(this.GrdLista);
@@ -216,19 +227,21 @@ namespace Habitaciones.UI
             this.GrdLista.Columns[0].Width =
                                 (int)System.Math.Floor(width * .04);
             this.GrdLista.Columns[1].Width =
-                                (int)System.Math.Floor(width * .13);
+                                (int)System.Math.Floor(width * .11);
             this.GrdLista.Columns[2].Width =
-                                (int)System.Math.Floor(width * .12);
+                                (int)System.Math.Floor(width * .11);
             this.GrdLista.Columns[3].Width =
-                               (int)System.Math.Floor(width * .14);
+                               (int)System.Math.Floor(width * .12);
             this.GrdLista.Columns[4].Width =
-                                (int)System.Math.Floor(width * .15);
+                                (int)System.Math.Floor(width * .13);
             this.GrdLista.Columns[5].Width =
-                                (int)System.Math.Floor(width * .24);
+                                (int)System.Math.Floor(width * .22);
             this.GrdLista.Columns[6].Width =
                                 (int)System.Math.Floor(width * .09);
             this.GrdLista.Columns[7].Width =
                                 (int)System.Math.Floor(width * .09);
+            this.GrdLista.Columns[8].Width =
+                               (int)System.Math.Floor(width * .09);
         }
 
         private MainMenu mPpal;

@@ -303,6 +303,7 @@
         /// </summary>
         /// <param name="habitacion">Id habitacion.</param>
 		public void setGraficoHabitacion(int habitacion){
+            Console.WriteLine(habitacion);
 			this.MostrarOcupacionPorHabitacion(habitacion);
 		}
 

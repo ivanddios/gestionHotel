@@ -60,7 +60,7 @@
     <tarifa iva="0.21">12</tarifa>
     <total>14.52</total>
   </reserva>
-   <reserva id="20171217209">
+  <reserva id="20171217209">
     <cliente>
       <nombre>Yeray Lage Freitas</nombre>
       <dni>45567832R</dni>

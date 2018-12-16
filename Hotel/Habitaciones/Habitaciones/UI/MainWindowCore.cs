@@ -52,6 +52,15 @@ namespace Habitaciones.UI
                 int Identificador = (int)this.MainWindowView.GrdLista.CurrentRow.Cells[3].Value;
                 this.UpdateHabitacion(Identificador);
             }
+            else if (this.MainWindowView.GrdLista.CurrentCell.ColumnIndex == 8)
+            {
+                int Identificador = (int)this.MainWindowView.GrdLista.CurrentRow.Cells[3].Value;
+                GestionDeHoteles.GUI.MainWindow main = new GestionDeHoteles.GUI.MainWindow(new GestionDeHoteles.XML.XMLBrowser(), 1280, 720);
+                main.Show();
+                main.setGraficoHabitacion(Identificador);
+                Gtk.Application.Run();
+
+            }
         }
         
         void Eliminar()
