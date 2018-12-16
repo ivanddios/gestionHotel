@@ -157,7 +157,7 @@
         /// Cambia la lista al anho seleccionado según el gráfico de ocupacion que se quiera mostrar
         /// </summary>
         /// <param name="valor">+1/-1 si pulsa un boton</param>
-		public void setAnho(int valor){
+		private void setAnho(int valor){
 			this.Anho = this.Anho + valor;
             int anhoX = Convert.ToInt32(getAnhoString(this.Anho));
 			switch(this.datosMostrados){
@@ -180,7 +180,7 @@
         /// <summary>
         /// Cambia la lista al grafico de ocupacion que se quiera mostrar
         /// </summary>    
-		public void setGeneral(){
+		private void setGeneral(){
 			this.porMeses = false;
             switch(this.datosMostrados){
                 case OCUPACION_GENERAL:
