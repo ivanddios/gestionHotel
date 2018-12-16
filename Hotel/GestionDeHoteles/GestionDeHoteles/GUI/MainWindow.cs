@@ -328,7 +328,7 @@
             //Console.WriteLine(habitacion);
             if (!(habitacion.Equals(0))){
 				if(habitaciones.Contains(habitacion)){
-					cbClientes.Active = habitaciones.IndexOf(habitacion);
+					cbHabitaciones.Active = habitaciones.IndexOf(habitacion);
                 }
             }
 
@@ -380,7 +380,7 @@
 			comodidades.ForEach((string obj) => Console.Write("[" + obj + "], "));
 			if(!(comodidad == null || comodidad.Equals(""))){
 				if(comodidades.Contains(comodidad)){
-					cbClientes.Active = comodidades.IndexOf(comodidad);
+					cbComodidades.Active = comodidades.IndexOf(comodidad);
                 }
             }
 
