@@ -324,7 +324,9 @@
             this.datosMostrados = OCUPACION_POR_HABITACION;
 			List<int> habitaciones = browser.getHabitaciones();
 			this.RepopulateComboBox(cbHabitaciones, habitaciones);
-			if(!(habitacion.Equals(0))){
+            //habitaciones.ForEach((int obj) => Console.Write("[ " + obj + " ]"));
+            //Console.WriteLine(habitacion);
+            if (!(habitacion.Equals(0))){
 				if(habitaciones.Contains(habitacion)){
 					cbClientes.Active = habitaciones.IndexOf(habitacion);
                 }
