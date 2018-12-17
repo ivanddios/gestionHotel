@@ -20,3 +20,6 @@ C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\ob
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Clientes.csproj.CopyComplete
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.exe
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.pdb
+C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.exe
+C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.pdb
+C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.exe.config

@@ -216,148 +216,148 @@
             this.reservasPorHabitacionCincoDias = ordenadas.ToList();
             this.ActualizaConFiltroPorHabitacion5Dias();
         }
-			
-        
-
-  //    	private void FiltrarPorHabitacionCincoDias(){
-            
-  //          this.pnlDisponibilidad.Hide();
-  //          this.pnlPpal.Show();
-		//	var filtro5Dias= new Filtro5Dias();
-
-		//	this.reservasPorHabitacionCincoDias= new List<Reserva>();
-		//	if (filtro5Dias.ShowDialog() == DialogResult.OK)
-  //          {
-		//		foreach (Reserva reserva in this.reservas)
-  //              {
-		//			if (reserva.Habitacion.Numero.Equals(int.Parse(filtro5Dias.Habitacion)) &&
-		//			    reserva.Habitacion.Piso.Equals(int.Parse(filtro5Dias.Piso)))
-  //                  {
-		//				if (reserva.FechaEntrada.CompareTo(DateTime.Now.AddDays(5)) <= 0 &&
-  //                     reserva.FechaEntrada.CompareTo(DateTime.Now) >= 0)
-  //                      {
-  //                          this.reservasPorHabitacionCincoDias.Add(reserva);
-  //                      }
-  //                  }
-
-  //              }
-  //              this.ActualizaConFiltroPorHabitacion5Dias();
-  //              return;
-  //          }         
-  //      }
-      
-		//private void FiltrarPorPersona()
-  //      {         
-  //          this.pnlDisponibilidad.Hide();
-  //          this.pnlPpal.Show();
-  //          var filtroPorPersona = new FiltroPorPersona();
-
-  //          this.reservasPorPersona = new List<Reserva>();
-  //          if (filtroPorPersona.ShowDialog() == DialogResult.OK)
-  //          {            
-  //              foreach (Reserva reserva in this.reservas)
-  //              {
-		//			if (reserva.Cliente.Dni.Equals(filtroPorPersona.Persona))
-  //                  {
-  //                      this.reservasPorPersona.Add(reserva);
-  //                      //System.Console.WriteLine(reserva.ToString());
-  //                  }
-  //              }
-  //              this.ActualizaConFiltroPorPersona();
-  //              return;
-  //          }
-  //      }
-
-		//private void FiltrarPorPersona(object sender, EventArgs e, string DNI)
-  //      {
-
-		//	//this.btFiltroDni = sender as Button;
-		//	//if(this.btFiltroDni!=null){
-		//		this.pnlDisponibilidad.Hide();
-  //              this.pnlPpal.Show();
 
 
-  //              this.reservasPorPersona = new List<Reserva>();
-  //              foreach (Reserva reserva in this.reservas)
-  //              {
-  //                  if (reserva.Cliente.Dni.Equals(DNI))
-  //                  {
-  //                      this.reservasPorPersona.Add(reserva);
-  //                      //System.Console.WriteLine(reserva.ToString());
-  //                  }
-  //              }
-  //              this.ActualizaConFiltroPorPersona();
-		//		return;
-		//	//}
-            
-  //      }
-        
-		//private void OrdenarPorCliente()
-  //      {
 
-  //          this.pnlDisponibilidad.Hide();
-  //          this.pnlPpal.Show();
-		//	var ordenadas = this.reservas.OrderBy((x) => x.Cliente.Dni);
-  //          this.reservas = ordenadas.ToList();
-  //          this.Actualiza();
-  //          return;
-  //      }
+        //    	private void FiltrarPorHabitacionCincoDias(){
 
-		//private void OrdenarPorHabitacion(){
+        //          this.pnlDisponibilidad.Hide();
+        //          this.pnlPpal.Show();
+        //	var filtro5Dias= new Filtro5Dias();
 
-  //          this.pnlDisponibilidad.Hide();
-  //          this.pnlPpal.Show();
-		//	var ordenadas =this.reservas.OrderBy((x)=>x.Habitacion.Piso).ThenBy((y)=>y.Habitacion.Numero);
-		//	this.reservas = ordenadas.ToList();
-		//	this.Actualiza();
-		//	return;
-		//}
+        //	this.reservasPorHabitacionCincoDias= new List<Reserva>();
+        //	if (filtro5Dias.ShowDialog() == DialogResult.OK)
+        //          {
+        //		foreach (Reserva reserva in this.reservas)
+        //              {
+        //			if (reserva.Habitacion.Numero.Equals(int.Parse(filtro5Dias.Habitacion)) &&
+        //			    reserva.Habitacion.Piso.Equals(int.Parse(filtro5Dias.Piso)))
+        //                  {
+        //				if (reserva.FechaEntrada.CompareTo(DateTime.Now.AddDays(5)) <= 0 &&
+        //                     reserva.FechaEntrada.CompareTo(DateTime.Now) >= 0)
+        //                      {
+        //                          this.reservasPorHabitacionCincoDias.Add(reserva);
+        //                      }
+        //                  }
 
-		//private void FiltrarPorHabitacion()
-		//{
+        //              }
+        //              this.ActualizaConFiltroPorHabitacion5Dias();
+        //              return;
+        //          }         
+        //      }
 
-  //          this.pnlDisponibilidad.Hide();
-  //          this.pnlPpal.Show();
-		//	var filtroPorHabitacion = new FiltroPorHabitacion();
+        //private void FiltrarPorPersona()
+        //      {         
+        //          this.pnlDisponibilidad.Hide();
+        //          this.pnlPpal.Show();
+        //          var filtroPorPersona = new FiltroPorPersona();
 
-  //          this.reservasPorHabitacion = new List<Reserva>();
-		//	if (filtroPorHabitacion.ShowDialog() == DialogResult.OK)
-		//	{            
-		//		foreach (Reserva reserva in this.reservas)
-		//		{
-		//			if (reserva.Habitacion.Numero.Equals(int.Parse(filtroPorHabitacion.Habitacion))&&
-		//			    reserva.Habitacion.Piso.Equals(int.Parse(filtroPorHabitacion.Piso)))
-		//			{
-		//				this.reservasPorHabitacion.Add(reserva);
-		//				//this.reservasPorHabitacion.OrderBy((Reserva arg) => arg.Habitacion.Numero);
-		//				//System.Console.WriteLine(reserva.ToString());
-		//			}
-		//		}
-		//		this.ActualizaConFiltroPorHabitacion();
-		//		return;
-		//	}
-		//}
+        //          this.reservasPorPersona = new List<Reserva>();
+        //          if (filtroPorPersona.ShowDialog() == DialogResult.OK)
+        //          {            
+        //              foreach (Reserva reserva in this.reservas)
+        //              {
+        //			if (reserva.Cliente.Dni.Equals(filtroPorPersona.Persona))
+        //                  {
+        //                      this.reservasPorPersona.Add(reserva);
+        //                      //System.Console.WriteLine(reserva.ToString());
+        //                  }
+        //              }
+        //              this.ActualizaConFiltroPorPersona();
+        //              return;
+        //          }
+        //      }
 
-            //this.Shown += (sender, e) => this.Actualiza();
-
-	/*	private List<Reserva> FiltrarCincoDias()
+        public void FiltrarPorPersona(string DNI)
         {
-			TimeSpan timeSpan = DateTime.Now.AddDays(5) - DateTime.Now;
-            List<Reserva> rPH = new List<Reserva>();
+
+            //this.btFiltroDni = sender as Button;
+            //if(this.btFiltroDni!=null){
+            this.pnlDisponibilidad.Hide();
+            this.pnlPpal.Show();
+
+
+            this.reservasPorPersona = new List<Reserva>();
             foreach (Reserva reserva in this.reservas)
             {
-				TimeSpan timeSpan2 = reserva.FechaEntrada - DateTime.Now;
-				if (TimeSpan.Compare(timeSpan,timeSpan2)>=0)
+                if (reserva.Cliente.Dni.Equals(DNI))
                 {
-                    rPH.Add(reserva);
+                    this.reservasPorPersona.Add(reserva);
                     //System.Console.WriteLine(reserva.ToString());
                 }
             }
-            return rPH;
-        }*/
+            this.ActualizaConFiltroPorPersona();
+          
+            //}
+
+        }
+
+        //private void OrdenarPorCliente()
+        //      {
+
+        //          this.pnlDisponibilidad.Hide();
+        //          this.pnlPpal.Show();
+        //	var ordenadas = this.reservas.OrderBy((x) => x.Cliente.Dni);
+        //          this.reservas = ordenadas.ToList();
+        //          this.Actualiza();
+        //          return;
+        //      }
+
+        //private void OrdenarPorHabitacion(){
+
+        //          this.pnlDisponibilidad.Hide();
+        //          this.pnlPpal.Show();
+        //	var ordenadas =this.reservas.OrderBy((x)=>x.Habitacion.Piso).ThenBy((y)=>y.Habitacion.Numero);
+        //	this.reservas = ordenadas.ToList();
+        //	this.Actualiza();
+        //	return;
+        //}
+
+        //private void FiltrarPorHabitacion()
+        //{
+
+        //          this.pnlDisponibilidad.Hide();
+        //          this.pnlPpal.Show();
+        //	var filtroPorHabitacion = new FiltroPorHabitacion();
+
+        //          this.reservasPorHabitacion = new List<Reserva>();
+        //	if (filtroPorHabitacion.ShowDialog() == DialogResult.OK)
+        //	{            
+        //		foreach (Reserva reserva in this.reservas)
+        //		{
+        //			if (reserva.Habitacion.Numero.Equals(int.Parse(filtroPorHabitacion.Habitacion))&&
+        //			    reserva.Habitacion.Piso.Equals(int.Parse(filtroPorHabitacion.Piso)))
+        //			{
+        //				this.reservasPorHabitacion.Add(reserva);
+        //				//this.reservasPorHabitacion.OrderBy((Reserva arg) => arg.Habitacion.Numero);
+        //				//System.Console.WriteLine(reserva.ToString());
+        //			}
+        //		}
+        //		this.ActualizaConFiltroPorHabitacion();
+        //		return;
+        //	}
+        //}
+
+        //this.Shown += (sender, e) => this.Actualiza();
+
+        /*	private List<Reserva> FiltrarCincoDias()
+            {
+                TimeSpan timeSpan = DateTime.Now.AddDays(5) - DateTime.Now;
+                List<Reserva> rPH = new List<Reserva>();
+                foreach (Reserva reserva in this.reservas)
+                {
+                    TimeSpan timeSpan2 = reserva.FechaEntrada - DateTime.Now;
+                    if (TimeSpan.Compare(timeSpan,timeSpan2)>=0)
+                    {
+                        rPH.Add(reserva);
+                        //System.Console.WriteLine(reserva.ToString());
+                    }
+                }
+                return rPH;
+            }*/
 
 
-		private void Salir()
+        private void Salir()
 		{
 			//this.reservas.GuardaXml();
 			this.Dispose( true );

@@ -3,6 +3,7 @@ using Gestión_Hotel.Core;
 using Gestión_Hotel.XML;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using BusquedasHotel.Core;
 
 namespace Gestión_Hotel.UI
 {
@@ -51,6 +52,14 @@ namespace Gestión_Hotel.UI
                 Gtk.Application.Run();
 
             }
+            else if (this.MainWindowViewClientes.GrdListaClientes.CurrentCell.ColumnIndex == 9)
+            {
+                string DNIBusqueda = (string)this.MainWindowViewClientes.GrdListaClientes.CurrentRow.Cells[2].Value;
+                 BusquedasHotel.View.MainWindow ventana = new BusquedasHotel.View.MainWindow();
+                ventana.FiltrarPorPersona(DNIBusqueda);
+                //this.ModificarCliente(DNI);
+
+            }
 
             this.MainWindowViewClientes.GrdListaClientes.Enabled = true;
         }
@@ -63,7 +72,7 @@ namespace Gestión_Hotel.UI
             {
                 if (this.validarDNI(dlgInsertarCliente.Dni) && this.validarEmail(dlgInsertarCliente.Email))
                 {
-                    Cliente cliente = new Cliente(dlgInsertarCliente.Nombre,
+                    Gestión_Hotel.Core.Cliente cliente = new Gestión_Hotel.Core.Cliente(dlgInsertarCliente.Nombre,
                                                dlgInsertarCliente.Dni,
                                                dlgInsertarCliente.Telefono,
                                                dlgInsertarCliente.Email,
@@ -96,7 +105,7 @@ namespace Gestión_Hotel.UI
 
         void ModificarCliente(string DNI)
         {
-            Cliente cliente = this.RegistroClientes.getUsuario(DNI);
+            Gestión_Hotel.Core.Cliente cliente = this.RegistroClientes.getUsuario(DNI);
             var dlgModificarCliente = new DlgModificarCliente(cliente);
 
             if (dlgModificarCliente.ShowDialog() == DialogResult.OK)
@@ -104,7 +113,7 @@ namespace Gestión_Hotel.UI
 
                     this.RegistroClientes.Remove(cliente);
 
-                Cliente nuevoUsuario = new Cliente(dlgModificarCliente.Nombre,
+                Gestión_Hotel.Core.Cliente nuevoUsuario = new Gestión_Hotel.Core.Cliente(dlgModificarCliente.Nombre,
                                                        dlgModificarCliente.Dni,
                                                        dlgModificarCliente.Telefono,
                                                        dlgModificarCliente.Email,
@@ -146,7 +155,7 @@ namespace Gestión_Hotel.UI
             }
 
             DataGridViewRow fila = this.MainWindowViewClientes.GrdListaClientes.Rows[numFila];
-            Cliente cliente = this.RegistroClientes.List[numFila];
+            Gestión_Hotel.Core.Cliente cliente = this.RegistroClientes.List[numFila];
 
             fila.Cells[0].Value = (numFila + 1).ToString().PadLeft(4, ' ');
             fila.Cells[1].Value = cliente.Nombre;

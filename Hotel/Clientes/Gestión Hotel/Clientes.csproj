@@ -90,6 +90,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\BusquedasHotel\BusquedasHotel.csproj">
+      <Project>{a2903866-0921-41c2-9264-6a65c5f1577f}</Project>
+      <Name>BusquedasHotel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\GestionDeHoteles\GestionDeHoteles\Graficos.csproj">
       <Project>{cda84b60-9fb0-42c4-8a77-77f5c417c08f}</Project>
       <Name>Graficos</Name>
