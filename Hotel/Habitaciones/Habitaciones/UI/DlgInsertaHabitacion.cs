@@ -39,7 +39,7 @@ namespace Habitaciones.UI
 
             pnlInserta.ResumeLayout(true);
 
-            this.Text = "Añadir un nuevo cliente";
+            this.Text = "Añadir una nueva habitación";
             this.Size = new Size(450,
                             pnlTipo.Height + pnlFechaReserva.Height
                             + pnlIdentificador.Height + pnlFechaRenovacion.Height
@@ -78,7 +78,7 @@ namespace Habitaciones.UI
 			this.tbFechaReserva.CustomFormat = "dd/MM/yyyy";
             var lblFechaReserva = new Label()
             {
-                Text = "Fecha de la ultima reserva",
+                Text = "Fecha Reserva",
                 Dock = DockStyle.Left
             };
 
@@ -95,10 +95,11 @@ namespace Habitaciones.UI
             var pnlIdentificador = new Panel();
             this.nudIdentificador = new NumericUpDown
             {
-                Value = 0,
+                //Value = 0,
                 TextAlign = HorizontalAlignment.Right,
                 Dock = DockStyle.Fill,
-                Minimum = 1
+                Minimum = 101,
+                Maximum = 999
             };
 
             var lbNumSerie = new Label()
@@ -122,7 +123,7 @@ namespace Habitaciones.UI
             this.tbFechaRenovacion.CustomFormat = "dd/MM/yyyy";
             var lblFechaRenovacion = new Label()
             {
-                Text = "FechaRenovacion",
+                Text = "Renovación",
                 Dock = DockStyle.Left
             };
 

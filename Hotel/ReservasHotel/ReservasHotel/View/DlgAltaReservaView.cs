@@ -172,7 +172,7 @@
             {
                 this.edGaraje.Checked = this.reservaModificar.UsaGaraje;
             }
-            this.edGaraje.Text = "Uso del garaje";
+            this.edGaraje.Text = "Garaje";
             this.edGaraje.TextAlign = ContentAlignment.MiddleRight;
             
             this.edGaraje.CheckedChanged += (sender, e) => this.ActualizarTarifaGaraje();

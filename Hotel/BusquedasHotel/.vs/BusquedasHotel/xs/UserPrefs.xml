@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{A2903866-0921-41C2-9264-6A65C5F1577F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="View/MainWindowCore.cs">
+    <Files>
+      <File FileName="View/MainWindowCore.cs" Line="538" Column="51" />
+      <File FileName="View/MainWindowView.cs" Line="135" Column="67" />
+      <File FileName="View/Ocupacion.cs" Line="3" Column="24" />
+      <File FileName="View/FiltroPorHabitacion.cs" Line="1" Column="1" />
+      <File FileName="Core/Reserva.cs" Line="42" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BusquedasHotel PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

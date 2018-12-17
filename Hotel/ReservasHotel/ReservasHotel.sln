@@ -8,7 +8,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Habitaciones", "..\Habitaci
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clientes", "..\Clientes\Gestión Hotel\Clientes.csproj", "{BCC73AB8-C997-4D89-96BB-E79EC9335DC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDeHoteles", "..\GestionDeHoteles\GestionDeHoteles\GestionDeHoteles.csproj", "{CDA84B60-9FB0-42C4-8A77-77F5C417C08F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graficos", "..\GestionDeHoteles\GestionDeHoteles\Graficos.csproj", "{CDA84B60-9FB0-42C4-8A77-77F5C417C08F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusquedasHotel", "..\BusquedasHotel\BusquedasHotel.csproj", "{A2903866-0921-41C2-9264-6A65C5F1577F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,12 @@ Global
 		{CDA84B60-9FB0-42C4-8A77-77F5C417C08F}.Release|Any CPU.ActiveCfg = Release|x86
 		{CDA84B60-9FB0-42C4-8A77-77F5C417C08F}.Release|x86.ActiveCfg = Release|x86
 		{CDA84B60-9FB0-42C4-8A77-77F5C417C08F}.Release|x86.Build.0 = Release|x86
+		{A2903866-0921-41C2-9264-6A65C5F1577F}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A2903866-0921-41C2-9264-6A65C5F1577F}.Debug|x86.ActiveCfg = Debug|x86
+		{A2903866-0921-41C2-9264-6A65C5F1577F}.Debug|x86.Build.0 = Debug|x86
+		{A2903866-0921-41C2-9264-6A65C5F1577F}.Release|Any CPU.ActiveCfg = Release|x86
+		{A2903866-0921-41C2-9264-6A65C5F1577F}.Release|x86.ActiveCfg = Release|x86
+		{A2903866-0921-41C2-9264-6A65C5F1577F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -138,7 +138,7 @@ namespace Habitaciones.UI
             {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 CellTemplate = textCellTemplate2,
-                HeaderText = "Fecha última reserva",
+                HeaderText = "Reserva",
                 ReadOnly = true,
                          
             };
@@ -157,7 +157,7 @@ namespace Habitaciones.UI
             {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 CellTemplate = textCellTemplate4,
-                HeaderText = "Fecha de renovación",
+                HeaderText = "Renovación",
                 ReadOnly = true,
                 Width = 15
 

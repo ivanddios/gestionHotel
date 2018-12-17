@@ -14,6 +14,7 @@
 
 
 
+
     public partial class MainWindow
     {
         public MainWindow()
@@ -24,6 +25,19 @@
             this.habitaciones = RegistroHabitaciones.RecuperaXml();
             this.clientes = RegistroClientes.RecuperaXml();
             this.ActualizaListaReservas(0);
+
+
+            //System.IO.File.Copy(sourceFile, destFile, true);
+           // string path = Path.GetDirectoryName(Application.ExecutablePath) + "\\" + reserva.IdReserva + ".txt";
+           // File.WriteAllText(@path, reserva.GenerarFactura());
+
+
+            this.BusquedasView = new BusquedasHotel.View.MainWindow();
+            this.pnlBusquedasPpal = this.BusquedasView.BuildPpal();
+            this.pnlBusquedasDisponibilidad = this.BusquedasView.BuildPanelListaDisponibilidad();
+
+            //this.pnlBusquedasPpal =  this.BusquedasView.devolverPanelPpal();
+            //this.pnlBusquedasDisponibilidad = this.BusquedasView.devolverPanelDisponibilidad();
 
             //Integracion CLIENTES
             this.ClienteView = new Gestión_Hotel.UI.MainWindowViewClientes();
@@ -46,8 +60,17 @@
             //Operaciones RESERVASS
             this.OpConsultarReservas.Click += (sender, e) => this.mostrarReservas();
             this.OpGraficos.Click += (sender, e) => this.generarGrafico();
-
             this.OpAltaReserva.Click += (sender, e) => this.AltaReserva();
+
+            //Operaciones BUSQUEDAS
+
+            this.OpReservasPendientes.Click += (sender, e) => this.reservasPendientes();
+           
+            
+            //this.OpDisponibilidad.Click += (sender, e) => this.disponibilidad();
+            //this.OpOcupacion.Click += (sender, e) => this.ocupacion();
+
+
             this.FormClosed += (sender, e) => this.OnQuit();
 
         }
@@ -87,10 +110,29 @@
             this.HabitacionCore.BuildHabitacion();
         }
 
+
+
+
+        /* Métodos Búsquedas*/
+
+        private void reservasPendientes()
+        {
+            this.pnlPpal.Controls.Clear();
+            
+            this.BusquedasView.PendientesHotel5Dias();
+            this.BusquedasView.Actualiza();
+            this.pnlPpal.Controls.Add(this.pnlBusquedasPpal);
+            
+            this.BusquedasView.ResizeWindow();
+        }
+
+
+
+
         /*
          * Metodos Reservas
          */
-         
+
         private void mostrarReservas()
         {
             this.pnlPpal.Controls.Clear();
@@ -109,7 +151,7 @@
             if (dlgAltaReserva.ShowDialog() == DialogResult.OK)
             {
                 var h = dlgAltaReserva.habitacion;
-                h.FechaReserva = dlgAltaReserva.FechaEntrada.ToString();
+                h.FechaReserva = dlgAltaReserva.FechaSalida.ToString("yyyy/MM/dd");
                  var reserva = new Reserva(h, dlgAltaReserva.cliente,
                     dlgAltaReserva.FechaEntrada, dlgAltaReserva.FechaSalida, dlgAltaReserva.UsaGaraje, dlgAltaReserva.Tarifa);
                 this.reservas.Add(reserva);
@@ -400,6 +442,10 @@
             get; private set;
         }
 
+        public BusquedasHotel.View.MainWindow BusquedasView
+        {
+            get; private set;
+        }
 
         private RegistroReservas reservas;
         private RegistroHabitaciones habitaciones;

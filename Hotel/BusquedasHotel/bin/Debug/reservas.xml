@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<reservas>
+  <reserva dniCliente="44479663D" habitacion="300" fechaEntrada="04/03/2018" fechaSalida="06/05/2019">
+    <idReserva>20181127300</idReserva>
+  </reserva>
+</reservas>

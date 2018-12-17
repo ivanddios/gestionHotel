@@ -74,3 +74,6 @@ C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHot
 C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csproj.CopyComplete
 C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.exe
 C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.pdb
+C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.exe
+C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.pdb
+C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.exe.config

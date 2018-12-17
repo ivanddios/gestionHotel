@@ -14,6 +14,8 @@ namespace ReservasHotel.View
         private Panel pnl;
         private Panel pnlHabitaciones;
         private Panel pnlClientes;
+        private Panel pnlBusquedasPpal;
+        private Panel pnlBusquedasDisponibilidad;
         public DataGridView grdLista;
         public TextBox edDetalle;
 
@@ -81,7 +83,7 @@ namespace ReservasHotel.View
             this.mClientes = new MenuItem("&Clientes");
 			this.mHabitaciones = new MenuItem("&Habitaciones");
 			this.mReservas = new MenuItem("&Reservas");
-
+            this.mBusquedas = new MenuItem("&Busquedas");
             //Operaciones del los elementos del menu
             this.OpSalir = new MenuItem("&Salir") { Shortcut = Shortcut.CtrlQ };
             this.OpSalir.Click += (sender, e) => this.Salir();
@@ -98,7 +100,11 @@ namespace ReservasHotel.View
             this.OpConsultarReservas = new MenuItem("&Consultar");
             this.OpAltaReserva = new MenuItem("&Nueva");
             this.OpGraficos= new MenuItem("&Gráficos");
-            
+
+            this.OpReservasPendientes = new MenuItem("&Reservas Pendientes");
+            this.OpDisponibilidad = new MenuItem("&Disponibilidad");
+            this.OpOcupacion = new MenuItem("&Ocupacion");
+
             //Agregacion de las operaciones a los elementos
             this.mArchivo.MenuItems.Add(this.OpSalir);
 
@@ -109,17 +115,23 @@ namespace ReservasHotel.View
             //Agregacion operaciones de HABITACIONES
             this.mHabitaciones.MenuItems.Add(this.OpConsultarHabitaciones);
             this.mHabitaciones.MenuItems.Add(this.OpInsertarHabitacion);
-
+            
             //Agregacion operaciones de RESERVAS
             this.mReservas.MenuItems.Add(this.OpConsultarReservas);
             this.mReservas.MenuItems.Add(this.OpAltaReserva);
-			this.mReservas.MenuItems.Add(this.OpGraficos);
+            this.mReservas.MenuItems.Add(this.OpGraficos);
+            
+            //Agregacion operaciones de BUSQUEDAS
+            this.mBusquedas.MenuItems.Add(this.OpReservasPendientes);
+            this.mBusquedas.MenuItems.Add(this.OpDisponibilidad);
+            this.mBusquedas.MenuItems.Add(this.OpOcupacion);
 
             //Agregacion de los elementos al menu
             this.mPpal.MenuItems.Add(this.mArchivo);
 			this.mPpal.MenuItems.Add(this.mClientes);
 			this.mPpal.MenuItems.Add(this.mHabitaciones);
 			this.mPpal.MenuItems.Add(this.mReservas);
+            this.mPpal.MenuItems.Add(this.mBusquedas);
             this.Menu = mPpal;
             this.Show();
         }
@@ -335,5 +347,11 @@ namespace ReservasHotel.View
 
         public MenuItem OpConsultarClientes { get; set; }
         public MenuItem OpInsertarCliente { get; set; }
+
+        public MenuItem mBusquedas { get; set; }
+        public MenuItem OpReservasPendientes { get; set; }
+        public MenuItem OpDisponibilidad { get; set; }
+        public MenuItem OpOcupacion { get; set; }
+
     }
 }

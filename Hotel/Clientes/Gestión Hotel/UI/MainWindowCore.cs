@@ -27,6 +27,9 @@ namespace Gestión_Hotel.UI
 
         void SeleccionarAccionCliente()
         {
+
+            this.MainWindowViewClientes.GrdListaClientes.Enabled = false;
+
             //Case Modificar-Cliente
             if (this.MainWindowViewClientes.GrdListaClientes.CurrentCell.ColumnIndex == 6)
             {
@@ -48,6 +51,8 @@ namespace Gestión_Hotel.UI
                 Gtk.Application.Run();
 
             }
+
+            this.MainWindowViewClientes.GrdListaClientes.Enabled = true;
         }
 
         public void InsertarCliente()

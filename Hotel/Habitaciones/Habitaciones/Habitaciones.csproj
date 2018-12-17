@@ -85,9 +85,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GestionDeHoteles\GestionDeHoteles\GestionDeHoteles.csproj">
+    <ProjectReference Include="..\..\GestionDeHoteles\GestionDeHoteles\Graficos.csproj">
       <Project>{cda84b60-9fb0-42c4-8a77-77f5c417c08f}</Project>
-      <Name>GestionDeHoteles</Name>
+      <Name>Graficos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
