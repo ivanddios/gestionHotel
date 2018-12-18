@@ -24,3 +24,17 @@ C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\BusquedasHotel\obj\x86\Deb
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\BusquedasHotel\obj\x86\Debug\BusquedasHotel.csproj.CoreCompileInputs.cache
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\BusquedasHotel\obj\x86\Debug\BusquedasHotel.exe
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\BusquedasHotel\obj\x86\Debug\BusquedasHotel.pdb
+D:\Uni\DIA\gestionHotel\Hotel\BusquedasHotel\bin\Debug\BusquedasHotel.exe.config
+D:\Uni\DIA\gestionHotel\Hotel\BusquedasHotel\bin\Debug\BusquedasHotel.exe
+D:\Uni\DIA\gestionHotel\Hotel\BusquedasHotel\bin\Debug\BusquedasHotel.pdb
+D:\Uni\DIA\gestionHotel\Hotel\BusquedasHotel\obj\x86\Debug\BusquedasHotel.csprojAssemblyReference.cache
+D:\Uni\DIA\gestionHotel\Hotel\BusquedasHotel\obj\x86\Debug\BusquedasHotel.csproj.CoreCompileInputs.cache
+D:\Uni\DIA\gestionHotel\Hotel\BusquedasHotel\obj\x86\Debug\BusquedasHotel.exe
+D:\Uni\DIA\gestionHotel\Hotel\BusquedasHotel\obj\x86\Debug\BusquedasHotel.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\BusquedasHotel\bin\Debug\BusquedasHotel.exe.config
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\BusquedasHotel\bin\Debug\BusquedasHotel.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\BusquedasHotel\bin\Debug\BusquedasHotel.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\BusquedasHotel\obj\x86\Debug\BusquedasHotel.csprojAssemblyReference.cache
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\BusquedasHotel\obj\x86\Debug\BusquedasHotel.csproj.CoreCompileInputs.cache
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\BusquedasHotel\obj\x86\Debug\BusquedasHotel.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\BusquedasHotel\obj\x86\Debug\BusquedasHotel.pdb

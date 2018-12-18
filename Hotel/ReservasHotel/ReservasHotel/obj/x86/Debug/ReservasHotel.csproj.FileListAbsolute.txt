@@ -77,3 +77,63 @@ C:\Users\Patri\Desktop\proyecto-dia\gestionHotel\Hotel\ReservasHotel\ReservasHot
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.exe
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.pdb
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.exe.config
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\ReservasHotel.exe.config
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\ReservasHotel.exe
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\ReservasHotel.pdb
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\atk-sharp.dll
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.exe
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\gdk-sharp.dll
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.exe
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.exe
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\glib-sharp.dll
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\gtk-sharp.dll
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.exe
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Mono.Cairo.dll
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\pango-sharp.dll
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.pdb
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.exe.config
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.pdb
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.exe.config
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.pdb
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.exe.config
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.pdb
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.exe.config
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\atk-sharp.pdb
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\gdk-sharp.pdb
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\glib-sharp.pdb
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\pango-sharp.pdb
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csprojAssemblyReference.cache
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csproj.CoreCompileInputs.cache
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csproj.CopyComplete
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.exe
+D:\Uni\DIA\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\ReservasHotel.exe.config
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\ReservasHotel.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\ReservasHotel.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\atk-sharp.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\gdk-sharp.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\glib-sharp.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\gtk-sharp.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Mono.Cairo.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\pango-sharp.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\BusquedasHotel.exe.config
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\GestionDeHoteles.exe.config
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Habitaciones.exe.config
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\Gestión Hotel.exe.config
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\atk-sharp.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\gdk-sharp.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\glib-sharp.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\pango-sharp.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csprojAssemblyReference.cache
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csproj.CoreCompileInputs.cache
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.csproj.CopyComplete
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\obj\x86\Debug\ReservasHotel.pdb

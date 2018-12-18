@@ -20,6 +20,53 @@ C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\ob
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Clientes.csproj.CopyComplete
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.exe
 C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.pdb
-C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.exe
-C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.pdb
-C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.exe.config
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\Gestión Hotel.exe.config
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\Gestión Hotel.exe
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\Gestión Hotel.pdb
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\atk-sharp.dll
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\gdk-sharp.dll
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\GestionDeHoteles.exe
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\glib-sharp.dll
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\gtk-sharp.dll
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\Mono.Cairo.dll
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\pango-sharp.dll
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\GestionDeHoteles.pdb
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\GestionDeHoteles.exe.config
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\atk-sharp.pdb
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\gdk-sharp.pdb
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\glib-sharp.pdb
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\pango-sharp.pdb
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Clientes.csprojAssemblyReference.cache
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.exe.config
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Clientes.csproj.CoreCompileInputs.cache
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Clientes.csproj.CopyComplete
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.exe
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.pdb
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.exe
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.pdb
+D:\Uni\DIA\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.exe.config
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\Gestión Hotel.exe.config
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\Gestión Hotel.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\Gestión Hotel.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\atk-sharp.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\gdk-sharp.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\GestionDeHoteles.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\glib-sharp.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\gtk-sharp.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\Mono.Cairo.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\pango-sharp.dll
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\BusquedasHotel.exe.config
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\GestionDeHoteles.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\GestionDeHoteles.exe.config
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\atk-sharp.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\gdk-sharp.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\glib-sharp.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\bin\Debug\pango-sharp.pdb
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Clientes.csprojAssemblyReference.cache
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.exe.config
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Clientes.csproj.CoreCompileInputs.cache
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Clientes.csproj.CopyComplete
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.exe
+C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\Clientes\Gestión Hotel\obj\Debug\Gestión Hotel.pdb

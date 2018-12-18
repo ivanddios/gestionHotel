@@ -21,4 +21,11 @@
     <fechaRenovacion>12/02/2009</fechaRenovacion>
     <comodidades>Wifi, Mini Bar, TV</comodidades>
   </habitacion>
+  <habitacion>
+    <tipo>individual</tipo>
+    <fechaReserva>18/12/2018</fechaReserva>
+    <identificador>114</identificador>
+    <fechaRenovacion>18/12/2018</fechaRenovacion>
+    <comodidades></comodidades>
+  </habitacion>
 </habitaciones>

@@ -106,12 +106,30 @@
             {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 CellTemplate = textCellTemplate1,
-                HeaderText = "Número de Piso",
+                HeaderText = "Tipo",
                 Width = 120,
                 ReadOnly = true
             };
-			this.grdListaDisponibilidad.Columns.AddRange(new DataGridViewColumn[] {
-				column0,column1,column2
+
+            var column3 = new DataGridViewTextBoxColumn
+            {
+                SortMode = DataGridViewColumnSortMode.NotSortable,
+                CellTemplate = textCellTemplate1,
+                HeaderText = "Comodidades",
+                Width = 120,
+                ReadOnly = true
+            };
+
+            var column4 = new DataGridViewTextBoxColumn
+            {
+                SortMode = DataGridViewColumnSortMode.NotSortable,
+                CellTemplate = textCellTemplate1,
+                HeaderText = "Ultima Reserva",
+                Width = 120,
+                ReadOnly = true
+            };
+            this.grdListaDisponibilidad.Columns.AddRange(new DataGridViewColumn[] {
+				column0,column1,column2,column3,column4
             });
 
 
@@ -138,13 +156,13 @@
             };
             pnlDetalle.Controls.Add( this.edDetalle );
 
-			this.btFiltroDni = new Button{
+			/*this.btFiltroDni = new Button{
 				Dock=DockStyle.Right
 			};
 			this.edDetalle.Controls.Add(this.btFiltroDni);
-            pnlDetalle.ResumeLayout( false );
+            pnlDetalle.ResumeLayout( false );*/
 
-            //this.Shown += (sender, e) => this.Actualiza();
+            this.Shown += (sender, e) => this.Actualiza();
             return pnlDetalle;
         }
         
@@ -216,14 +234,6 @@
                 Width = 60,
                 ReadOnly = true
             };
-			var column6 = new DataGridViewTextBoxColumn
-            {
-                SortMode = DataGridViewColumnSortMode.NotSortable,
-                CellTemplate = textCellTemplate6,
-                HeaderText = "Nº Piso",
-                Width = 60,
-                ReadOnly = true
-            };
 
             var column3 = new DataGridViewTextBoxColumn {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
@@ -251,12 +261,12 @@
             };
             
             this.grdLista.Columns.AddRange( new DataGridViewColumn[] {
-				column0, column1, column2, column6, column3, column4, column5
+				column0, column1, column2, column3, column4, column5
             } );
 
 
-           // this.grdLista.SelectionChanged +=
-                                    //    (sender, e) => this.FilaSeleccionada();
+            this.grdLista.SelectionChanged +=
+                                        (sender, e) => this.FilaSeleccionada();
             pnlLista.Controls.Add( this.grdLista );
             pnlLista.ResumeLayout( false );
             return pnlLista;
@@ -297,7 +307,7 @@
         public Panel BuildDisponibilidad()
         {
 
-            this.BuildPanelLista();
+            //this.BuildPanelLista();
             this.SuspendLayout();
 
             this.pnlDisponibilidad = new Panel()
@@ -317,7 +327,7 @@
             this.ResumeLayout(true);
            // this.ResizeWindow();
             //this.Closed += (sender, e) => this.Salir();
-            this.Shown += (sender, e) => this.Actualiza();
+            //this.Shown += (sender, e) => this.Actualiza();
 
             return this.pnlDisponibilidad;
         }
@@ -337,8 +347,6 @@
                                 (int) System.Math.Floor( width *.15 ); 
             this.grdLista.Columns[ ColNumHabitacion ].Width =
                                 (int) System.Math.Floor( width *.15 );
-			this.grdLista.Columns[ ColPisoHabitacion ].Width =
-                                (int) System.Math.Floor( width *.10 ); 
             this.grdLista.Columns[ ColNumHabitacion ].Width =
                                 (int) System.Math.Floor( width *.15 );  
             this.grdLista.Columns[ ColNumHabitacion ].Width =
