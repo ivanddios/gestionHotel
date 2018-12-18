@@ -14,7 +14,8 @@ namespace Gestión_Hotel.UI
         {
             //this.MainWindowViewClientes = new MainWindowViewClientes();
             this.MainWindowViewClientes = mvc;
-            this.RegistroClientes = RegistroClientes.RecuperaXml();
+            this.RegistroClientes = Gestión_Hotel.XML.RegistroClientes.RecuperaXml();
+            this.BusquedasView = new BusquedasHotel.View.MainWindow();
             //this.MainWindowViewClientes.FormClosed += (sender, e) => this.Salir();
             //this.MainWindowViewClientes.opSalir.Click += (sender, e) => this.Salir();
             //this.MainWindowViewClientes.OpInsertarCliente.Click += (sender, e) => this.InsertarCliente();
@@ -55,8 +56,16 @@ namespace Gestión_Hotel.UI
             else if (this.MainWindowViewClientes.GrdListaClientes.CurrentCell.ColumnIndex == 9)
             {
                 string DNIBusqueda = (string)this.MainWindowViewClientes.GrdListaClientes.CurrentRow.Cells[2].Value;
-                 BusquedasHotel.View.MainWindow ventana = new BusquedasHotel.View.MainWindow();
+
+                BusquedasHotel.View.MainWindow ventana = new BusquedasHotel.View.MainWindow();
+                //this.MainWindowViewClientes.Hide();
+                ventana.Show();
                 ventana.FiltrarPorPersona(DNIBusqueda);
+
+                ventana.ActualizaConFiltroPorPersona();
+                this.MainWindowViewClientes.pnlPpal.Controls.Add(this.MainWindowViewClientes.pnlBusquedasPpal);
+
+                ventana.ResizeWindow();
                 //this.ModificarCliente(DNI);
 
             }
@@ -67,7 +76,7 @@ namespace Gestión_Hotel.UI
         public void InsertarCliente()
         {
             var dlgInsertarCliente = new DlgInsertarCliente();
-            
+
             if (dlgInsertarCliente.ShowDialog() == DialogResult.OK)
             {
                 if (this.validarDNI(dlgInsertarCliente.Dni) && this.validarEmail(dlgInsertarCliente.Email))
@@ -78,11 +87,12 @@ namespace Gestión_Hotel.UI
                                                dlgInsertarCliente.Email,
                                                dlgInsertarCliente.Direccion);
                     this.RegistroClientes.Add(cliente);
-                } else
+                }
+                else
                 {
                     this.InsertarCliente();
                 }
-                        
+
             }
             this.ActualizaClientes();
         }
@@ -111,14 +121,14 @@ namespace Gestión_Hotel.UI
             if (dlgModificarCliente.ShowDialog() == DialogResult.OK)
             {
 
-                    this.RegistroClientes.Remove(cliente);
+                this.RegistroClientes.Remove(cliente);
 
                 Gestión_Hotel.Core.Cliente nuevoUsuario = new Gestión_Hotel.Core.Cliente(dlgModificarCliente.Nombre,
                                                        dlgModificarCliente.Dni,
                                                        dlgModificarCliente.Telefono,
                                                        dlgModificarCliente.Email,
                                                        dlgModificarCliente.Direccion);
-                    this.RegistroClientes.Add(nuevoUsuario);
+                this.RegistroClientes.Add(nuevoUsuario);
 
             }
             this.ActualizaClientes();
@@ -180,26 +190,26 @@ namespace Gestión_Hotel.UI
 
             if (Regex.Match(DNI, expresion).Success == true)
             {
-                    foreach (string dniXML in dnisXML)
+                foreach (string dniXML in dnisXML)
+                {
+                    if (DNI == dniXML)
                     {
-                        if (DNI == dniXML)
-                        {
-                            existeDNI = false;
-                        }
+                        existeDNI = false;
                     }
+                }
 
-                    if (existeDNI)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        DialogResult result;
-                        string title = "Error en la operación";
-                        string mensaje = "El DNI introducido ya existe.";
-                        result = MessageBox.Show(mensaje, title);
-                        return false;
-                    }
+                if (existeDNI)
+                {
+                    return true;
+                }
+                else
+                {
+                    DialogResult result;
+                    string title = "Error en la operación";
+                    string mensaje = "El DNI introducido ya existe.";
+                    result = MessageBox.Show(mensaje, title);
+                    return false;
+                }
             }
             else
             {
@@ -243,16 +253,16 @@ namespace Gestión_Hotel.UI
                         result = MessageBox.Show(mensaje, title);
                         return false;
                     }
-             
-            }
-            else
-            {
-                DialogResult result;
-                string title = "Error en la operación";
-                string mensaje = "El formato del email es incorrecto.";
-                result = MessageBox.Show(mensaje, title);
-                return false;
-            }
+
+                }
+                else
+                {
+                    DialogResult result;
+                    string title = "Error en la operación";
+                    string mensaje = "El formato del email es incorrecto.";
+                    result = MessageBox.Show(mensaje, title);
+                    return false;
+                }
             }
             else
             {
@@ -278,6 +288,11 @@ namespace Gestión_Hotel.UI
             get; private set;
         }
 
-        public RegistroClientes RegistroClientes { get; set; }
+        public BusquedasHotel.View.MainWindow BusquedasView
+        {
+            get; private set;
+        }
+
+        public Gestión_Hotel.XML.RegistroClientes RegistroClientes { get; set; }
     }
 }

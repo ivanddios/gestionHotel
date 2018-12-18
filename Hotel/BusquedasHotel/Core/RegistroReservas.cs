@@ -166,7 +166,7 @@ namespace BusquedasHotel.Core
         {
 
             var toret = new RegistroReservas();
-            var doc = XDocument.Load(@"C:\Users\ivand\OneDrive\Documentos\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\registro_reservas.xml");
+            var doc = XDocument.Load(@"C:\Users\ivand\OneDrive\Escritorio\gestionHotel\Hotel\ReservasHotel\ReservasHotel\bin\Debug\registro_reservas.xml");
 
             var reservasElement = doc.Root.Elements("reserva");
 

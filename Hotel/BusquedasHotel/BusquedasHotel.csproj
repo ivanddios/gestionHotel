@@ -40,13 +40,12 @@
   <ItemGroup>
     <Compile Include="Core\Cliente.cs" />
     <Compile Include="Core\Habitacion.cs" />
+    <Compile Include="Core\RegistroClientes.cs" />
+    <Compile Include="Core\RegistroHabitaciones.cs" />
     <Compile Include="Core\RegistroReservas.cs" />
     <Compile Include="Core\Reserva.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\Program.cs" />
-    <Compile Include="View\DlgInserta.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="View\MainWindowCore.cs">
       <SubType>Form</SubType>
     </Compile>

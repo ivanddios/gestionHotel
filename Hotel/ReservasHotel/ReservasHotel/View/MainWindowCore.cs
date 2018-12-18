@@ -65,10 +65,10 @@
             //Operaciones BUSQUEDAS
 
             this.OpReservasPendientes.Click += (sender, e) => this.reservasPendientes();
-           
-            
-            //this.OpDisponibilidad.Click += (sender, e) => this.disponibilidad();
-            //this.OpOcupacion.Click += (sender, e) => this.ocupacion();
+            this.OpDisponibilidad.Click += (sender, e) => this.disponibilidad();
+            this.OpOcupacion.Click += (sender, e) => this.ocupacion();
+            this.OpFiltroHabitacion.Click += (sender, e) => this.filtrarPorHabitacion();
+            this.OpFiltroPersona.Click += (sender, e) => this.filtrarPorPersona();
 
 
             this.FormClosed += (sender, e) => this.OnQuit();
@@ -126,8 +126,52 @@
             this.BusquedasView.ResizeWindow();
         }
 
+        private void disponibilidad()
+        {
+            this.pnlPpal.Controls.Clear();
+
+            this.BusquedasView.Disponibilidad();
+            this.BusquedasView.ActualizaDisponibilidad();
+            this.pnlPpal.Controls.Add(this.pnlBusquedasDisponibilidad);
+
+            this.BusquedasView.ResizeWindow();            
+        }
 
 
+        private void ocupacion()
+        {
+            this.pnlPpal.Controls.Clear();
+
+            this.BusquedasView.Ocupacion();
+            this.BusquedasView.ActualizaOcupacion();
+            this.pnlPpal.Controls.Add(this.pnlBusquedasPpal);
+
+            this.BusquedasView.ResizeWindow();
+
+        }
+
+        private void filtrarPorHabitacion()
+        {
+            this.pnlPpal.Controls.Clear();
+
+            this.BusquedasView.FiltrarPorHabitacion();
+            this.BusquedasView.ActualizaConFiltroPorHabitacion();
+            this.pnlPpal.Controls.Add(this.pnlBusquedasPpal);
+
+            this.BusquedasView.ResizeWindow();
+
+        }
+
+        private void filtrarPorPersona()
+        {
+            this.pnlPpal.Controls.Clear();
+
+            this.BusquedasView.FiltrarPorPersona();
+            this.BusquedasView.ActualizaConFiltroPorPersona();
+            this.pnlPpal.Controls.Add(this.pnlBusquedasPpal);
+
+            this.BusquedasView.ResizeWindow();
+        }
 
         /*
          * Metodos Reservas

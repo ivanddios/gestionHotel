@@ -104,6 +104,8 @@ namespace ReservasHotel.View
             this.OpReservasPendientes = new MenuItem("&Reservas Pendientes");
             this.OpDisponibilidad = new MenuItem("&Disponibilidad");
             this.OpOcupacion = new MenuItem("&Ocupacion");
+            this.OpFiltroHabitacion = new MenuItem("&Filtro por Habitacion");
+            this.OpFiltroPersona = new MenuItem("&Filtro por Persona");
 
             //Agregacion de las operaciones a los elementos
             this.mArchivo.MenuItems.Add(this.OpSalir);
@@ -125,6 +127,8 @@ namespace ReservasHotel.View
             this.mBusquedas.MenuItems.Add(this.OpReservasPendientes);
             this.mBusquedas.MenuItems.Add(this.OpDisponibilidad);
             this.mBusquedas.MenuItems.Add(this.OpOcupacion);
+            this.mBusquedas.MenuItems.Add(this.OpFiltroHabitacion);
+            this.mBusquedas.MenuItems.Add(this.OpFiltroPersona);
 
             //Agregacion de los elementos al menu
             this.mPpal.MenuItems.Add(this.mArchivo);
@@ -352,6 +356,8 @@ namespace ReservasHotel.View
         public MenuItem OpReservasPendientes { get; set; }
         public MenuItem OpDisponibilidad { get; set; }
         public MenuItem OpOcupacion { get; set; }
+        public MenuItem OpFiltroPersona { get; set; }
+        public MenuItem OpFiltroHabitacion { get; set; }
 
     }
 }
