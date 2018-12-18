@@ -1,0 +1,15 @@
+Nombre del proyecto: 
+    Hoteles
+
+Miembros del grupo: 
+    Ivan Fernández Sánchez
+    Ivan de Dios Fernández
+    Brais Álvarez Valencia
+    Jose Javier Arjiz Cao
+    Patricia Martín Pérez
+    
+Enlace a GitHub:
+    https://github.com/ivanddios/gestionHotel
+    
+Descripción del proyecto:
+    
