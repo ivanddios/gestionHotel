@@ -1,8 +1,8 @@
-# gestionHotel
+# hotelManagement
 
 Web application to manage a hotel.
 
-## Construido con 🛠️
+## Built with 🛠️
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) 
 
 ## Authors
